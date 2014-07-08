@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC01196B40EA006441AB /* AppDelegate.swift */; };
+		B338EC04196B40EA006441AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* ViewController.swift */; };
+		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
+		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
+		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
+		B338EC7C196B43D8006441AB /* Irene in Resources */ = {isa = PBXBuildFile; fileRef = B338EC7B196B43D8006441AB /* Irene */; };
+		B338EC7E196BF4E7006441AB /* Perinthia in Resources */ = {isa = PBXBuildFile; fileRef = B338EC7D196BF4E7006441AB /* Perinthia */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B338EC0F196B40EA006441AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B338EBF4196B40EA006441AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B338EBFB196B40EA006441AB;
+			remoteInfo = InvisibleCities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B338EBFC196B40EA006441AB /* InvisibleCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvisibleCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B338EC03196B40EA006441AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B338EC06196B40EA006441AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B338EC08196B40EA006441AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
+		B338EC7B196B43D8006441AB /* Irene */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Irene; path = ../../../Users/Leo/Irene; sourceTree = "<group>"; };
+		B338EC7D196BF4E7006441AB /* Perinthia */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Perinthia; path = ../../../Users/Leo/Public/Perinthia; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B338EBF9196B40EA006441AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B338EC0B196B40EA006441AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B338EBF3196B40EA006441AB = {
+			isa = PBXGroup;
+			children = (
+				B338EC7D196BF4E7006441AB /* Perinthia */,
+				B338EC7B196B43D8006441AB /* Irene */,
+				B338EBFE196B40EA006441AB /* InvisibleCities */,
+				B338EC11196B40EA006441AB /* InvisibleCitiesTests */,
+				B338EBFD196B40EA006441AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B338EBFD196B40EA006441AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B338EBFC196B40EA006441AB /* InvisibleCities.app */,
+				B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B338EBFE196B40EA006441AB /* InvisibleCities */ = {
+			isa = PBXGroup;
+			children = (
+				B338EC01196B40EA006441AB /* AppDelegate.swift */,
+				B338EC03196B40EA006441AB /* ViewController.swift */,
+				B338EC05196B40EA006441AB /* Main.storyboard */,
+				B338EC08196B40EA006441AB /* Images.xcassets */,
+				B338EBFF196B40EA006441AB /* Supporting Files */,
+			);
+			path = InvisibleCities;
+			sourceTree = "<group>";
+		};
+		B338EBFF196B40EA006441AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B338EC00196B40EA006441AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B338EC11196B40EA006441AB /* InvisibleCitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */,
+				B338EC12196B40EA006441AB /* Supporting Files */,
+			);
+			path = InvisibleCitiesTests;
+			sourceTree = "<group>";
+		};
+		B338EC12196B40EA006441AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B338EC13196B40EA006441AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B338EBFB196B40EA006441AB /* InvisibleCities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "InvisibleCities" */;
+			buildPhases = (
+				B338EBF8196B40EA006441AB /* Sources */,
+				B338EBF9196B40EA006441AB /* Frameworks */,
+				B338EBFA196B40EA006441AB /* Resources */,
+				B338EC7A196B42CD006441AB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InvisibleCities;
+			productName = InvisibleCities;
+			productReference = B338EBFC196B40EA006441AB /* InvisibleCities.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B338EC0D196B40EA006441AB /* InvisibleCitiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "InvisibleCitiesTests" */;
+			buildPhases = (
+				B338EC0A196B40EA006441AB /* Sources */,
+				B338EC0B196B40EA006441AB /* Frameworks */,
+				B338EC0C196B40EA006441AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B338EC10196B40EA006441AB /* PBXTargetDependency */,
+			);
+			name = InvisibleCitiesTests;
+			productName = InvisibleCitiesTests;
+			productReference = B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B338EBF4196B40EA006441AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Leo;
+				TargetAttributes = {
+					B338EBFB196B40EA006441AB = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B338EC0D196B40EA006441AB = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B338EBFB196B40EA006441AB;
+					};
+				};
+			};
+			buildConfigurationList = B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "InvisibleCities" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B338EBF3196B40EA006441AB;
+			productRefGroup = B338EBFD196B40EA006441AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B338EBFB196B40EA006441AB /* InvisibleCities */,
+				B338EC0D196B40EA006441AB /* InvisibleCitiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B338EBFA196B40EA006441AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B338EC7C196B43D8006441AB /* Irene in Resources */,
+				B338EC7E196BF4E7006441AB /* Perinthia in Resources */,
+				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
+				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B338EC0C196B40EA006441AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B338EC7A196B42CD006441AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/tcsh;
+			shellScript = "touch -cm ${SRCROOT}/Irene";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B338EBF8196B40EA006441AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B338EC04196B40EA006441AB /* ViewController.swift in Sources */,
+				B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B338EC0A196B40EA006441AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B338EC10196B40EA006441AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B338EBFB196B40EA006441AB /* InvisibleCities */;
+			targetProxy = B338EC0F196B40EA006441AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B338EC05196B40EA006441AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B338EC06196B40EA006441AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B338EC16196B40EA006441AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		B338EC17196B40EA006441AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B338EC19196B40EA006441AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = InvisibleCities/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B338EC1A196B40EA006441AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = InvisibleCities/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B338EC1C196B40EA006441AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InvisibleCities.app/InvisibleCities";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InvisibleCitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B338EC1D196B40EA006441AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InvisibleCities.app/InvisibleCities";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InvisibleCitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "InvisibleCities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B338EC16196B40EA006441AB /* Debug */,
+				B338EC17196B40EA006441AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "InvisibleCities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B338EC19196B40EA006441AB /* Debug */,
+				B338EC1A196B40EA006441AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "InvisibleCitiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B338EC1C196B40EA006441AB /* Debug */,
+				B338EC1D196B40EA006441AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B338EBF4196B40EA006441AB /* Project object */;
+}
