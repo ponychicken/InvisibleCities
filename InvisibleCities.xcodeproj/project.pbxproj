@@ -12,8 +12,6 @@
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
 		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
 		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
-		B338EC7C196B43D8006441AB /* Irene in Resources */ = {isa = PBXBuildFile; fileRef = B338EC7B196B43D8006441AB /* Irene */; };
-		B338EC7E196BF4E7006441AB /* Perinthia in Resources */ = {isa = PBXBuildFile; fileRef = B338EC7D196BF4E7006441AB /* Perinthia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
-		B338EC7B196B43D8006441AB /* Irene */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Irene; path = ../../../Users/Leo/Irene; sourceTree = "<group>"; };
-		B338EC7D196BF4E7006441AB /* Perinthia */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Perinthia; path = ../../../Users/Leo/Public/Perinthia; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +57,6 @@
 		B338EBF3196B40EA006441AB = {
 			isa = PBXGroup;
 			children = (
-				B338EC7D196BF4E7006441AB /* Perinthia */,
-				B338EC7B196B43D8006441AB /* Irene */,
 				B338EBFE196B40EA006441AB /* InvisibleCities */,
 				B338EC11196B40EA006441AB /* InvisibleCitiesTests */,
 				B338EBFD196B40EA006441AB /* Products */,
@@ -196,8 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B338EC7C196B43D8006441AB /* Irene in Resources */,
-				B338EC7E196BF4E7006441AB /* Perinthia in Resources */,
 				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
 				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
 			);
@@ -426,6 +418,7 @@
 				B338EC1A196B40EA006441AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "InvisibleCitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +427,7 @@
 				B338EC1D196B40EA006441AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
