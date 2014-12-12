@@ -12,6 +12,9 @@
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
 		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
 		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
+		B37A2C241A3A661D00DD03EE /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B37A2C231A3A661D00DD03EE /* Cities */; };
+		B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C251A3A680C00DD03EE /* WebKit.framework */; };
+		B37A2C281A3A6ADF00DD03EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
+		B37A2C231A3A661D00DD03EE /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
+		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37A2C281A3A6ADF00DD03EE /* AVFoundation.framework in Frameworks */,
+				B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,9 @@
 		B338EBF3196B40EA006441AB = {
 			isa = PBXGroup;
 			children = (
+				B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */,
+				B37A2C251A3A680C00DD03EE /* WebKit.framework */,
+				B37A2C231A3A661D00DD03EE /* Cities */,
 				B338EBFE196B40EA006441AB /* InvisibleCities */,
 				B338EC11196B40EA006441AB /* InvisibleCitiesTests */,
 				B338EBFD196B40EA006441AB /* Products */,
@@ -191,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
+				B37A2C241A3A661D00DD03EE /* Cities in Resources */,
 				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
