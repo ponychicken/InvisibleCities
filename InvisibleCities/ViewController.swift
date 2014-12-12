@@ -36,6 +36,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var cacheSizeMemory = 8*1024*1024; // 8MB
+        var cacheSizeDisk = 32*1024*1024; // 32MB
+        
+        var sharedCache = NSURLCache.init(
+            memoryCapacity:cacheSizeMemory,
+            diskCapacity:cacheSizeDisk,
+            diskPath: "nsurlcache"
+        )
+        
+        NSURLCache.setSharedURLCache(sharedCache)
+        
+        
         var setCategoryError: NSError?
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -61,6 +73,8 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         println("mem warn")
+        
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
         
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
