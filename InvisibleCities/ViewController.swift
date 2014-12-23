@@ -10,14 +10,27 @@ import WebKit
 import UIKit
 import AVFoundation
 
+
+
 class ViewController: UIViewController {
     
     @IBOutlet var containerView : UIView? = nil
     
     var webView: WKWebView?
     
+    
+    
     override func loadView() {
         super.loadView()
+        
+        let webServer = GCDWebServer()
+        
+        var docRoot = NSBundle.mainBundle().pathForResource("start", ofType: ".html", inDirectory: "Cities");
+        docRoot = docRoot?.stringByDeletingLastPathComponent;
+        
+        webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "start.html", cacheAge: 3600, allowRangeRequests: true)
+        
+        webServer.startWithPort(8000, bonjourName: nil)
         
         var config = WKWebViewConfiguration()
         config.mediaPlaybackAllowsAirPlay = true;
@@ -60,13 +73,9 @@ class ViewController: UIViewController {
             println("Error setting AVAudioSessionCategoryPlayback: \(setCategoryError)")
         }
 
+        var url = NSURL(string: "http://localhost:8000/Dom/Zirma.html")
         
-        var path = NSBundle.mainBundle().pathForResource("start", ofType: ".html", inDirectory: "Cities/Dom");
-        
-
-        var url = NSURL(fileURLWithPath: path!, isDirectory: false);
-        
-        var req = NSURLRequest(URL:url!)
+        var req = NSURLRequest(URL: url!)
         
         self.webView!.loadRequest(req)
     }
@@ -78,6 +87,10 @@ class ViewController: UIViewController {
         
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
 }
