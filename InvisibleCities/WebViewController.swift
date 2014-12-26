@@ -105,7 +105,7 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     
     func setUrl(part: String) {
 
-        var urlstring = "http://192.168.2.105/" + part + "/"
+        var urlstring = "http://localhost:8116" + part
         
         println(urlstring)
         
