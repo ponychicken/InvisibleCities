@@ -2,11 +2,14 @@ PODS:
   - GCDWebServer (3.2.1):
     - GCDWebServer/Core (= 3.2.1)
   - GCDWebServer/Core (3.2.1)
+  - Reveal-iOS-SDK (1.0.7)
 
 DEPENDENCIES:
   - GCDWebServer (~> 3.0)
+  - Reveal-iOS-SDK
 
 SPEC CHECKSUMS:
   GCDWebServer: 480ff5092eb357d124488929a474f23d00a758fd
+  Reveal-iOS-SDK: 7ee5e9b37ef13dcd93ae1736c1b72c7c650da3e3
 
 COCOAPODS: 0.35.0

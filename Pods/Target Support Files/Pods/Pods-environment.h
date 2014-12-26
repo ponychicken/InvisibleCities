@@ -18,3 +18,13 @@
 #define COCOAPODS_VERSION_MINOR_GCDWebServer_Core 2
 #define COCOAPODS_VERSION_PATCH_GCDWebServer_Core 1
 
+// Debug build configuration
+#ifdef DEBUG
+
+  // Reveal-iOS-SDK
+  #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
+  #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 1
+  #define COCOAPODS_VERSION_MINOR_Reveal_iOS_SDK 0
+  #define COCOAPODS_VERSION_PATCH_Reveal_iOS_SDK 7
+
+#endif
