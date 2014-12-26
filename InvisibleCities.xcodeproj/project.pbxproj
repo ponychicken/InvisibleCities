@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		35412447FBFE28F2EAA35DD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7DEAAB7457097C78F0979C /* libPods.a */; };
 		B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC01196B40EA006441AB /* AppDelegate.swift */; };
-		B338EC04196B40EA006441AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* ViewController.swift */; };
+		B338EC04196B40EA006441AB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* WebViewController.swift */; };
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
 		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
 		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
 		B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C251A3A680C00DD03EE /* WebKit.framework */; };
 		B37A2C281A3A6ADF00DD03EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */; };
+		B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE33341A4BA4960042E9CC /* NavDelegate.swift */; };
+		B3C4DD1F1A4B5A0000D5408E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */; };
+		B3C4DD211A4B6D5D00D5408E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4DD201A4B6D5D00D5408E /* CustomButton.swift */; };
 		B3D98C141A4A05A9001FCBD1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B3D98C131A4A05A9001FCBD1 /* Podfile */; };
-		B3D98C161A4A0706001FCBD1 /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B3D98C151A4A0706001FCBD1 /* Cities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,17 +38,18 @@
 		B338EBFC196B40EA006441AB /* InvisibleCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvisibleCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B338EC03196B40EA006441AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B338EC03196B40EA006441AB /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B338EC06196B40EA006441AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B338EC08196B40EA006441AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
-		B37A2C231A3A661D00DD03EE /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
 		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B3BE33341A4BA4960042E9CC /* NavDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDelegate.swift; sourceTree = "<group>"; };
+		B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B3C4DD201A4B6D5D00D5408E /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
 		B3D98C131A4A05A9001FCBD1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		B3D98C151A4A0706001FCBD1 /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +76,9 @@
 		B338EBF3196B40EA006441AB = {
 			isa = PBXGroup;
 			children = (
-				B3D98C151A4A0706001FCBD1 /* Cities */,
 				B3D98C131A4A05A9001FCBD1 /* Podfile */,
 				B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */,
 				B37A2C251A3A680C00DD03EE /* WebKit.framework */,
-				B37A2C231A3A661D00DD03EE /* Cities */,
 				B338EBFE196B40EA006441AB /* InvisibleCities */,
 				B338EC11196B40EA006441AB /* InvisibleCitiesTests */,
 				B338EBFD196B40EA006441AB /* Products */,
@@ -98,11 +99,14 @@
 		B338EBFE196B40EA006441AB /* InvisibleCities */ = {
 			isa = PBXGroup;
 			children = (
+				B3C4DD201A4B6D5D00D5408E /* CustomButton.swift */,
 				B338EC01196B40EA006441AB /* AppDelegate.swift */,
-				B338EC03196B40EA006441AB /* ViewController.swift */,
+				B338EC03196B40EA006441AB /* WebViewController.swift */,
 				B338EC05196B40EA006441AB /* Main.storyboard */,
 				B338EC08196B40EA006441AB /* Images.xcassets */,
 				B338EBFF196B40EA006441AB /* Supporting Files */,
+				B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */,
+				B3BE33341A4BA4960042E9CC /* NavDelegate.swift */,
 			);
 			path = InvisibleCities;
 			sourceTree = "<group>";
@@ -235,7 +239,6 @@
 				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
 				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
 				B3D98C141A4A05A9001FCBD1 /* Podfile in Resources */,
-				B3D98C161A4A0706001FCBD1 /* Cities in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B338EC04196B40EA006441AB /* ViewController.swift in Sources */,
+				B338EC04196B40EA006441AB /* WebViewController.swift in Sources */,
+				B3C4DD1F1A4B5A0000D5408E /* MenuView.swift in Sources */,
 				B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */,
+				B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */,
+				B3C4DD211A4B6D5D00D5408E /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,9 +425,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InvisibleCities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/leo/InvisibleCities/GCDWebServer/GDCWebServer-Bridging-Header.h";
 			};
@@ -433,9 +444,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InvisibleCities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/leo/InvisibleCities/GCDWebServer/GDCWebServer-Bridging-Header.h";
 			};

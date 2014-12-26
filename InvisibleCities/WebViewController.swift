@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WebViewController.swift
 //  irene3
 //
 //  Created by Leo on 02.07.14.
@@ -9,28 +9,22 @@
 import WebKit
 import UIKit
 import AVFoundation
+import Darwin
 
+let π = M_PI
 
-
-class ViewController: UIViewController {
+class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINavigationBarDelegate, WKNavigationDelegate {
     
     @IBOutlet var containerView : UIView? = nil
     
     var webView: WKWebView?
-    
-    
+    var curReq: NSURLRequest?
+    var isLandscape = true
+    var specialRotate = false
+    var blackBackground = false
     
     override func loadView() {
         super.loadView()
-        
-        let webServer = GCDWebServer()
-        
-        var docRoot = NSBundle.mainBundle().pathForResource("start", ofType: ".html", inDirectory: "Cities");
-        docRoot = docRoot?.stringByDeletingLastPathComponent;
-        
-        webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "start.html", cacheAge: 3600, allowRangeRequests: true)
-        
-        webServer.startWithPort(8000, bonjourName: nil)
         
         var config = WKWebViewConfiguration()
         config.mediaPlaybackAllowsAirPlay = true;
@@ -42,7 +36,24 @@ class ViewController: UIViewController {
             configuration: config
         )
         
+        self.webView?.navigationDelegate = self
+        self.webView?.scrollView.bounces = false
+        
         self.view = self.webView
+        
+        let recognizer = UILongPressGestureRecognizer(target: self, action:Selector("showBar:"))
+        recognizer.delegate = self
+        
+        self.view.addGestureRecognizer(recognizer)
+        
+        if (curReq != nil) {
+            self.webView!.loadRequest(curReq!);
+            self.rotate()
+            self.colorBackground()
+        }
+        
+        
+        self.setupNavBar()
     }
     
     
@@ -59,25 +70,7 @@ class ViewController: UIViewController {
         )
         
         NSURLCache.setSharedURLCache(sharedCache)
-        
-        
-        var setCategoryError: NSError?
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        
-        var ok = audioSession.setCategory(AVAudioSessionCategoryPlayback,
-            error: &setCategoryError
-        )
-        
-        if (!ok) {
-            println("Error setting AVAudioSessionCategoryPlayback: \(setCategoryError)")
-        }
-
-        var url = NSURL(string: "http://localhost:8000/Dom/Zirma.html")
-        
-        var req = NSURLRequest(URL: url!)
-        
-        self.webView!.loadRequest(req)
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,12 +79,128 @@ class ViewController: UIViewController {
         NSURLCache.sharedURLCache().removeAllCachedResponses()
         
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        if (isLandscape) {
+            return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+        } else {
+            return Int(UIInterfaceOrientationMask.PortraitUpsideDown.rawValue)
+        }
+    }
+    
+    func gestureRecognizer(UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+            return true
+    }
+
+    
+    func setUrl(part: String) {
+
+        var urlstring = "http://192.168.2.105/" + part + "/"
+        
+        println(urlstring)
+        
+        var url = NSURL(string: urlstring)
+        
+        curReq = NSURLRequest(URL: url!)
+        
+    }
+    
+    func setLandscape(land: Bool) {
+        self.isLandscape = land
+    }
+    
+    func setSpecialRotate(rotate: Bool) {
+        self.specialRotate = rotate
+    }
+    
+    func setBackground(black: Bool) {
+        self.blackBackground = black
+    }
+    
+    func colorBackground() {
+        if (self.blackBackground) {
+            self.view.backgroundColor = UIColor.blackColor()
+            self.webView?.scrollView.backgroundColor = UIColor.blackColor()
+            
+        } else {
+            self.view.backgroundColor = UIColor.whiteColor()
+            self.webView?.scrollView.backgroundColor =  UIColor.whiteColor()
+        }
+    }
+    
+    func rotate () {
+        var orientation: UIDeviceOrientation = UIDevice.currentDevice().orientation
+        
+        var deviceIsLandscape = (orientation == UIDeviceOrientation.LandscapeLeft || orientation == UIDeviceOrientation.LandscapeRight)
+        
+        var deviceIsPortrait = (orientation == UIDeviceOrientation.Portrait || orientation == UIDeviceOrientation.PortraitUpsideDown)
+        
+        if (self.isLandscape && deviceIsPortrait) {
+            let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        } else if (!self.isLandscape && deviceIsLandscape) {
+            let value = UIInterfaceOrientation.Portrait.rawValue
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        }
+        
+        UIViewController.attemptRotationToDeviceOrientation()
+        
+        if (self.specialRotate) {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
+            self.view.transform = transform
+        } else {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
+            self.view.transform = transform
+        }
+    }
+    
+    func fadeBar(to: CGFloat) {
+        self.fadeBar(to, delay: 0)
+    }
+    
+    func fadeBar(to: CGFloat, delay: NSTimeInterval) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(0.5)
+        UIView.setAnimationDelay(delay)
+        self.navigationController?.navigationBar.alpha = to
+        UIView.commitAnimations()
+        self.navigationController?.navigationBar.frame = CGRectMake(40, 10, 150, 45)
+    }
+    
+    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+        self.fadeBar(0, delay: 1)
+    }
+    
+    func setupNavBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        var navBar: UINavigationBar? = self.navigationController?.navigationBar
+        
+        var bounds: CGRect? = navBar?.bounds
+        
+        navBar?.bounds = bounds!
+        navBar?.frame = CGRectMake(40, 10, 150, 45)
+
+        
+        navBar?.tintColor = UIColor.whiteColor()
+        navBar?.barTintColor = UIColor.blackColor()
+    }
+    
+    
+    @IBAction func showBar(sender: AnyObject) {
+        self.fadeBar(1)
+        //self.fadeBar(0, delay: 3)
+    }
+    
     
 }
 
