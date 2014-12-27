@@ -15,12 +15,12 @@ class NavDelegate: UINavigationController, UINavigationBarDelegate {
         return UIBarPosition.Any
     }
     
-//    override func shouldAutorotate() -> Bool {        
-//        if let viewController = self.visibleViewController as? WebViewController {
-//            return viewController.shouldAutorotate()
-//        } else {
-//            return true
-//        }
-//
-//    }
+    override func shouldAutorotate() -> Bool {        
+        if let viewController = self.visibleViewController as? WebViewController {
+            return viewController.shouldAutorotate()
+        } else {
+            println("allowing autorotate")
+            return true
+        }
+    }
 }

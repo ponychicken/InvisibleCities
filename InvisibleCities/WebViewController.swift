@@ -22,6 +22,7 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     var isLandscape = true
     var specialRotate = false
     var blackBackground = false
+    var allowRotate = false
     
     override func loadView() {
         super.loadView()
@@ -85,9 +86,14 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         return true
     }
     
-//    override func shouldAutorotate() -> Bool {
-//        return false
-//    }
+    override func shouldAutorotate() -> Bool {
+        if (self.allowRotate || !self.hasCorrectRotation()) {
+            println("allowing autorotate")
+            return true
+        } else {
+            return false
+        }
+    }
     
     override func supportedInterfaceOrientations() -> Int {
         if (isLandscape) {
@@ -115,7 +121,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         var url = NSURL(string: urlstring)
         
         curReq = NSURLRequest(URL: url!)
-        
     }
     
     func setLandscape(land: Bool) {
@@ -141,22 +146,46 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         }
     }
     
-    func rotate () {
-        var orientation: UIDeviceOrientation = UIDevice.currentDevice().orientation
+    func hasCorrectRotation() -> Bool {
+        var device: UIDeviceOrientation = UIDevice.currentDevice().orientation
+        var interface: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
         
-        var deviceIsLandscape = (orientation == UIDeviceOrientation.LandscapeLeft || orientation == UIDeviceOrientation.LandscapeRight)
-        
-        var deviceIsPortrait = (orientation == UIDeviceOrientation.Portrait || orientation == UIDeviceOrientation.PortraitUpsideDown)
-        
-        if (self.isLandscape && !deviceIsLandscape) {
-            let value = UIInterfaceOrientation.LandscapeLeft.rawValue
-            UIDevice.currentDevice().setValue(value, forKey: "orientation")
-        } else if (!self.isLandscape && !deviceIsPortrait) {
-            let value = UIInterfaceOrientation.Portrait.rawValue
-            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        // Nothing to in these cases
+        if (device.isFlat || !device.isValidInterfaceOrientation || device == UIDeviceOrientation.Unknown) {
+            return true
         }
         
-        UIViewController.attemptRotationToDeviceOrientation()
+        // Simple cases: Interface is not what we want
+        if (self.isLandscape && !interface.isLandscape) {
+            return false
+        }
+        if (!self.isLandscape && interface.isLandscape) {
+            return false
+        }
+        
+        // Same orientation (portrait/land) but not exactly the same.
+        if (interface.isLandscape == device.isLandscape && device.rawValue != interface.rawValue) {
+            return false
+        }
+        
+        // What else?
+        return true
+        
+        
+    }
+    
+    func rotate () {
+        if (!self.hasCorrectRotation()) {
+            var value = (self.isLandscape) ? UIInterfaceOrientation.LandscapeLeft.rawValue : UIInterfaceOrientation.Portrait.rawValue
+            
+            self.allowRotate = true
+            
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+            
+            self.allowRotate = false
+            
+            UIViewController.attemptRotationToDeviceOrientation()
+        }
         
         if (self.specialRotate) {
             var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
