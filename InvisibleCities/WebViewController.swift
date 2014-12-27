@@ -85,9 +85,9 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         return true
     }
     
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
+//    override func shouldAutorotate() -> Bool {
+//        return false
+//    }
     
     override func supportedInterfaceOrientations() -> Int {
         if (isLandscape) {
@@ -105,15 +105,12 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     func urlFromPart(part: String) -> String {
         var server = "http://localhost:8116"
         var file = "index.html"
-        
         return server + "/" + part + "/" + file
     }
     
     func setUrl(part: String) {
-
-        var urlstring = self.urlFromPart(part)
         
-        println(urlstring)
+        var urlstring = self.urlFromPart(part)
         
         var url = NSURL(string: urlstring)
         
@@ -151,13 +148,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         
         var deviceIsPortrait = (orientation == UIDeviceOrientation.Portrait || orientation == UIDeviceOrientation.PortraitUpsideDown)
         
-        if (deviceIsPortrait) {
-          println("Device is portrait")
-        }
-        if (deviceIsLandscape) {
-            println("Device is landscape")
-        }
-        
         if (self.isLandscape && !deviceIsLandscape) {
             let value = UIInterfaceOrientation.LandscapeLeft.rawValue
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
@@ -168,15 +158,13 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         
         UIViewController.attemptRotationToDeviceOrientation()
         
-//        if (self.specialRotate) {
-//            var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
-//            self.view.transform = transform
-//        }
-        
-//        else {
-//            var transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
-//            self.view.transform = transform
-//        }
+        if (self.specialRotate) {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
+            self.view.transform = transform
+        } else {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
+            self.view.transform = transform
+        }
     }
     
     func fadeBar(to: CGFloat) {
