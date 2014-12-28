@@ -19,7 +19,6 @@ class NavDelegate: UINavigationController, UINavigationBarDelegate {
         if let viewController = self.visibleViewController as? WebViewController {
             return viewController.shouldAutorotate()
         } else {
-            println("allowing autorotate")
             return true
         }
     }

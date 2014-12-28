@@ -33,8 +33,5 @@ class MenuView: UIViewController {
             }
         }
     }
-    
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
+
 }

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var audioError: NSError?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        // Override point for customization after application launch.
         
         var docRoot = NSBundle.mainBundle().pathForResource("start", ofType: ".html", inDirectory: "Cities");
         docRoot = docRoot?.stringByDeletingLastPathComponent;
