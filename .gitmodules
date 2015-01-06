@@ -22,3 +22,6 @@
 [submodule "Cities/leo"]
 	path = Cities/leo
 	url = https://github.com/ponychicken/invisiblecities-leo.git
+[submodule "Cities/gabi"]
+	path = Cities/gabi
+	url = https://github.com/ponychicken/invisiblecities-gabi.git
