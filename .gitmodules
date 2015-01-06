@@ -1,24 +1,24 @@
 [submodule "Cities/lynn"]
 	path = Cities/lynn
-	url = git@github.com:ponychicken/invisiblecities-lynn.git
+	url = https://github.com/ponychicken/invisiblecities-lynn.git
 [submodule "Cities/dom"]
 	path = Cities/dom
-	url = git@github.com:ponychicken/invisiblecities-dom.git
+	url = https://github.com/ponychicken/invisiblecities-dom.git
 [submodule "Cities/wiebke"]
 	path = Cities/wiebke
-	url = git@github.com:ponychicken/invisiblecities-wiebke.git
+	url = https://github.com/ponychicken/invisiblecities-wiebke.git
 [submodule "Cities/eric"]
 	path = Cities/eric
-	url = git@github.com:ponychicken/invisiblecities-eric.git
+	url = https://github.com/ponychicken/invisiblecities-eric.git
 [submodule "Cities/lorenz"]
 	path = Cities/lorenz
-	url = git@github.com:ponychicken/invisiblecities-lorenz.git
+	url = https://github.com/ponychicken/invisiblecities-lorenz.git
 [submodule "Cities/marion"]
 	path = Cities/marion
-	url = git@github.com:ponychicken/invisiblecities-marion.git
+	url = https://github.com/ponychicken/invisiblecities-marion.git
 [submodule "Cities/ilya"]
 	path = Cities/ilya
-	url = git@github.com:ponychicken/invisiblecities-ilya.git
+	url = https://github.com/ponychicken/invisiblecities-ilya.git
 [submodule "Cities/leo"]
 	path = Cities/leo
-	url = git@github.com:ponychicken/invisiblecities-leo.git
+	url = https://github.com/ponychicken/invisiblecities-leo.git
