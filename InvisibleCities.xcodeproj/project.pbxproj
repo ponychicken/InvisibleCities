@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35412447FBFE28F2EAA35DD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7DEAAB7457097C78F0979C /* libPods.a */; };
+		B306C4521A5F3E3700C8B32E /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B306C4511A5F3E3700C8B32E /* Cities */; };
 		B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC01196B40EA006441AB /* AppDelegate.swift */; };
 		B338EC04196B40EA006441AB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* WebViewController.swift */; };
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
 		B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C251A3A680C00DD03EE /* WebKit.framework */; };
 		B37A2C281A3A6ADF00DD03EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */; };
-		B3867F261A4DDBAD0014D513 /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B3867F251A4DDBAD0014D513 /* Cities */; };
 		B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE33341A4BA4960042E9CC /* NavDelegate.swift */; };
 		B3C4DD1F1A4B5A0000D5408E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */; };
 		B3C4DD211A4B6D5D00D5408E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4DD201A4B6D5D00D5408E /* CustomButton.swift */; };
@@ -36,6 +36,7 @@
 		3693E13A684368A97166F04E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7DEAAB7457097C78F0979C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7E38B95EFFF49ACF9932B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B306C4511A5F3E3700C8B32E /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
 		B338EBFC196B40EA006441AB /* InvisibleCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvisibleCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
 		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B3867F251A4DDBAD0014D513 /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
 		B3BE33341A4BA4960042E9CC /* NavDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDelegate.swift; sourceTree = "<group>"; };
 		B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B3C4DD201A4B6D5D00D5408E /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		B338EBF3196B40EA006441AB = {
 			isa = PBXGroup;
 			children = (
-				B3867F251A4DDBAD0014D513 /* Cities */,
+				B306C4511A5F3E3700C8B32E /* Cities */,
 				B3D98C131A4A05A9001FCBD1 /* Podfile */,
 				B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */,
 				B37A2C251A3A680C00DD03EE /* WebKit.framework */,
@@ -242,7 +242,7 @@
 				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
 				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
 				B3D98C141A4A05A9001FCBD1 /* Podfile in Resources */,
-				B3867F261A4DDBAD0014D513 /* Cities in Resources */,
+				B306C4521A5F3E3700C8B32E /* Cities in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
