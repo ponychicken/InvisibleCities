@@ -18,7 +18,7 @@
 		B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE33341A4BA4960042E9CC /* NavDelegate.swift */; };
 		B3C4DD1F1A4B5A0000D5408E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */; };
 		B3D2B86B1A710CF6008176BB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D2B86A1A710CF6008176BB /* CustomButton.swift */; };
-		B3D2B86D1A710D07008176BB /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B3D2B86C1A710D07008176BB /* Cities */; };
+		B3D2B86F1A713056008176BB /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B3D2B86E1A713056008176BB /* Cities */; };
 		B3D98C141A4A05A9001FCBD1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B3D98C131A4A05A9001FCBD1 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		B3BE33341A4BA4960042E9CC /* NavDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDelegate.swift; sourceTree = "<group>"; };
 		B3C4DD1E1A4B5A0000D5408E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B3D2B86A1A710CF6008176BB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		B3D2B86C1A710D07008176BB /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
+		B3D2B86E1A713056008176BB /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
 		B3D98C131A4A05A9001FCBD1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +78,8 @@
 		B338EBF3196B40EA006441AB = {
 			isa = PBXGroup;
 			children = (
-				B3D2B86C1A710D07008176BB /* Cities */,
 				B3D98C131A4A05A9001FCBD1 /* Podfile */,
+				B3D2B86E1A713056008176BB /* Cities */,
 				B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */,
 				B37A2C251A3A680C00DD03EE /* WebKit.framework */,
 				B338EBFE196B40EA006441AB /* InvisibleCities */,
@@ -242,7 +242,7 @@
 				B338EC07196B40EA006441AB /* Main.storyboard in Resources */,
 				B338EC09196B40EA006441AB /* Images.xcassets in Resources */,
 				B3D98C141A4A05A9001FCBD1 /* Podfile in Resources */,
-				B3D2B86D1A710D07008176BB /* Cities in Resources */,
+				B3D2B86F1A713056008176BB /* Cities in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
