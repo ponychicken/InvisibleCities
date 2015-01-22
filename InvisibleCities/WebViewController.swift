@@ -28,9 +28,10 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         super.loadView()
         
         var config = WKWebViewConfiguration()
-        config.mediaPlaybackAllowsAirPlay = true;
+        config.mediaPlaybackAllowsAirPlay = false;
         config.mediaPlaybackRequiresUserAction = false;
         config.allowsInlineMediaPlayback = true;
+        
         
         self.webView = WKWebView(
             frame: self.view.bounds,
