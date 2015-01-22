@@ -110,7 +110,7 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     func urlFromPart(part: String) -> String {
-        var server = "http://192.168.2.1"
+        var server = "http://localhost:8116"
         var file = "index.html"
         return server + "/" + part + "/" + file
     }
