@@ -1,0 +1,232 @@
+.scrollable {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+@font-face {
+  font-family: 'Diktator';
+  src: url('weissenseediktatorsemibold-webfont.woff2') format('woff2'), url('weissenseediktatorsemibold-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: 'Diktator';
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  height: 100vh;
+}
+html {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  margin: 0;
+}
+h1 {
+  font-size: 2em;
+  text-indent: -0.05em;
+}
+h2 {
+  font-size: 0.8em;
+}
+.whiteOnAubergine {
+  background: #7f545c;
+  color: #ffffff;
+}
+.fullscreenPage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.page0 .fullscreenPage {
+  -webkit-transform: translateY(0vh);
+          transform: translateY(0vh);
+}
+.page1 .fullscreenPage {
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+.cover {
+  background: #7f545c;
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.cover h1,
+.cover h2 {
+  position: absolute;
+  width: 340px;
+  left: 36px;
+}
+.cover h1 {
+  top: 648px;
+}
+.cover h2 {
+  top: 682px;
+}
+.menu {
+  background: #7f545c;
+  color: #ffffff;
+  padding: 17px;
+  z-index: 10;
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 2px 0px 4px 0px rgba(50, 50, 50, 0.25);
+}
+.menu.collapsed {
+  width: 68px;
+}
+.menu.collapsed ul,
+.menu.collapsed .appTitle {
+  opacity: 0;
+}
+.menu.expanded {
+  width: 408px;
+}
+.menu.expanded .currentTitle,
+.menu.expanded .menuIcon {
+  opacity: 0;
+}
+.menu ul,
+.menu .currentTitle,
+.menu .menuIcon,
+.menu .appTitle {
+  transition: opacity 0.25s;
+}
+.menu li {
+  list-style: none;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+.menu .currentTitle {
+  font-size: 2em;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 10 10;
+          transform-origin: 10 10;
+}
+.menu ul {
+  position: absolute;
+  left: 36px;
+  top: 138px;
+  margin: 0;
+  padding: 0;
+}
+.menu .appTitle {
+  position: absolute;
+  left: 36px;
+  top: 36px;
+  width: 10em;
+}
+.menu .menuIcon .icon {
+  font-size: 3em;
+  line-height: 0.8;
+}
+.menu .menuIcon .icon,
+.menu .menuIcon .icon:before,
+.menu .menuIcon .icon:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  top: 10px;
+}
+.menu .menuIcon .icon:before {
+  top: -10px;
+}
+.menu .menuIcon .icon:after {
+  bottom: -10px;
+}
+.menu .menuIcon .icon,
+.menu .menuIcon .text {
+  position: relative;
+}
+.menu .menuIcon .text {
+  top: 25px;
+  font-size: 1em;
+}
+.text {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  left: 240px;
+  width: 136px;
+  top: 104px;
+  margin: 0em;
+  height: 900px;
+}
+.gridView {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 68px;
+  top: 0;
+  height: 100vh;
+}
+.gridView .gridItem {
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.6);
+  position: relative;
+  overflow-y: hidden;
+  width: 956px;
+  transition: height 0.5s;
+  height: 238px;
+}
+.gridView .gridItem img {
+  width: 956px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gridView .gridItem .gridText {
+  right: 36px;
+  width: 204px;
+  top: 36px;
+  position: absolute;
+  padding: 17px;
+  background: #ffffff;
+  display: none;
+}
+.gridView .gridItem .block {
+  top: 0;
+  background: white;
+  padding: 17px;
+  height: 100%;
+  right: 0;
+  width: 204px;
+  position: absolute;
+  background: #e3d5d8;
+}
+.gridView.focus .gridItem {
+  height: 5.05vh;
+}
+.gridView.focus .gridItem.focus {
+  height: 90vh;
+  z-index: 2;
+}

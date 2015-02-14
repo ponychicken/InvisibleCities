@@ -1,0 +1,294 @@
+@aubergine: #7f545c;
+@white: #fff;
+
+@outside-padding: 36px;
+@grid: 68px;
+@innerPadding: @grid / 4;
+
+.cols (@num) {
+  width: @num * @grid;
+}
+.rows (@num) {
+  height: @num * @grid;
+}
+
+.top (@num) {
+  top: @outside-padding + @num * @grid;
+}
+
+.left (@num) {
+  left: @outside-padding + @num * @grid;
+}
+.right (@num) {
+  right: @outside-padding + @num * @grid;
+}
+
+.scrollable {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+@font-face {
+    font-family: 'Diktator';
+    src: url('./weissenseediktatorsemibold-webfont.woff2') format('woff2'),
+         url('./weissenseediktatorsemibold-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Diktator';
+//     src: url('./weissenseediktatorlight-webfont.woff2') format('woff2'),
+//          url('./weissenseediktatorlight-webfont.woff') format('woff');
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// html {
+//   height: 1600px!important;
+//   overflow: scroll;
+//   background: red;
+// }
+// 
+// html{ bottom: 0;padding:0;margin:0}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+body {
+  // position: fixed;
+  // left: 0;
+  // top: 100px;
+  font-family: 'Diktator';
+  font-size: @grid / 4;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  //letter-spacing: 0.015em;
+  text-rendering: optimizeLegibility;
+  //bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+
+}
+
+html {
+  overflow: hidden;
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  text-indent: -0.05em;
+}
+
+h2 {
+  font-size: 0.8em;
+}
+
+.whiteOnAubergine {
+  background: @aubergine;
+  color: @white;
+}
+
+.fullscreenPage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.page0 .fullscreenPage {
+  transform: translateY(0vh);
+}
+
+.page1 .fullscreenPage {
+  transform: translateY(-100vh);
+}
+
+.cover {
+  .whiteOnAubergine;
+  .fullscreenPage;
+
+  
+  h1, h2 {
+    position: absolute;
+    .cols(5);
+    .left(0);
+  }
+  h1 {
+    .top(9);
+  }
+  h2 {
+    .top(9.5);
+  }
+}
+
+.menu {
+  .whiteOnAubergine;
+  padding: @innerPadding;
+  z-index: 10;
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 2px 0px 4px 0px rgba(50, 50, 50, 0.25);
+  &.collapsed  {
+    .cols(1);
+    ul, .appTitle {
+      opacity: 0;
+    }
+  }
+  
+  &.expanded  {
+    .cols(6);
+    .currentTitle, .menuIcon {
+      opacity: 0;
+    }
+  }
+  
+  ul, .currentTitle, .menuIcon, .appTitle {
+    transition: opacity 0.25s;
+  }
+  
+  li {
+    list-style: none;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .currentTitle {
+    font-size: 2em;
+    position: absolute;
+    bottom: 0px;
+    left: @innerPadding - 2;
+    transform: rotate(-90deg);
+    transform-origin: 10 10;
+  }
+  
+  ul {
+    position: absolute;
+    left: @outside-padding;
+    .top(1.5);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .appTitle {
+    position: absolute;
+    left: @outside-padding;
+    .top(0);
+    width: 10em;
+  }
+  .menuIcon {
+    .icon {
+      font-size: 3em;
+      line-height: 0.8;
+    }
+    .icon, 
+    .icon:before,
+    .icon:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+      top: 10px;
+    }
+    .icon:before {
+      top: -10px;
+    }
+    .icon:after {
+      bottom: -10px; 
+    }
+    .icon, .text {
+      position: relative;
+    }
+      
+    .text {
+      top: 25px;
+      font-size: 1em;
+    }
+  }
+}
+
+.text {
+  .scrollable;
+  position: absolute;
+  .left(3);
+  .cols(2);
+  .top(1);
+  margin: 0em;
+  height: 900px;
+
+}
+
+.gridView {
+  .scrollable;
+  margin-left: @grid;
+  top: 0;
+  height: 100vh;
+  //position: absolute;
+  .gridItem {
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.6);
+    position: relative;
+    overflow-y: hidden;
+    width: 1024 - @grid;
+    transition: height 0.5s;
+    .rows(3.5);
+    
+    img {
+      width: 1024 - @grid;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .gridText {
+      .right(0);
+      .cols(3);
+      .top(0);
+      position: absolute;
+      padding: @innerPadding;
+      background: @white;
+      display: none;
+    }
+    
+    .block {
+      top: 0;
+      background: white;
+      padding: @innerPadding;
+      height: 100%;
+      right: 0;
+      .cols(3);
+      position: absolute;
+      background: lighten(@aubergine, 45);
+    }
+    
+
+  }
+  &.focus {
+    .gridItem {
+      height: 5.05vh;
+    }
+    .gridItem.focus {
+      height: 90vh;
+      z-index: 2;
+    }
+  }
+}
