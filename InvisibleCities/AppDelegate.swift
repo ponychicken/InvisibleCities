@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         
-        var docRoot = NSBundle.mainBundle().pathForResource("start", ofType: ".html", inDirectory: "Cities");
+        var docRoot = NSBundle.mainBundle().pathForResource("index", ofType: ".html", inDirectory: "dist");
         docRoot = docRoot?.stringByDeletingLastPathComponent;
         
         webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)

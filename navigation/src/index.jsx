@@ -20,7 +20,7 @@ var projects = [
     author: 'Dom Okah',
     city: 'Perinthia',
     text: fillText,
-    image: 'IMG_0012.png',
+    image: './IMG_0012.png',
     landscape: true
   },
   
@@ -28,21 +28,21 @@ var projects = [
     author: 'Lorenz',
     city: 'Unknown',
     text: fillText,
-    image: 'IMG_0013.png',
+    image: './IMG_0013.png',
     landscape: false
   },
   {
     author: 'Wiebke Helmchen',
     city: 'Chloe',
     text: fillText,
-    image: 'IMG_0011.png',
+    image: './IMG_0011.png',
     landscape: true
   },
   {
     author: 'Ilya Barret',
     city: 'Perinthia',
     text: fillText,
-    image: 'IMG_0016.png',
+    image: './IMG_0016.png',
     landscape: false
   },
 ];

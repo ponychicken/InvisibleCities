@@ -153,7 +153,7 @@
                     <navigationItem key="navigationItem" id="glk-Nd-il3"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://pony.local:8000/"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://localhost:8116/index.html"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="containerView" destination="puH-oB-M2z" id="kDn-GO-FPL"/>
