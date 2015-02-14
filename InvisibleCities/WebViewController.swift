@@ -15,6 +15,8 @@ let π = M_PI
 
 class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINavigationBarDelegate, WKNavigationDelegate {
     
+    internal var url = ""
+    
     @IBOutlet var containerView : UIView? = nil
     
     var webView: WKWebView?
@@ -48,12 +50,15 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         
         self.view.addGestureRecognizer(recognizer)
         
+        self.setUrl(self.url)
+        
         if (curReq != nil) {
             self.webView!.loadRequest(curReq!);
             self.rotate()
             self.colorBackground()
         }
         
+
         
         self.setupNavBar()
     }
@@ -115,13 +120,18 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         return server + "/" + part + "/" + file
     }
     
-    func setUrl(part: String) {
-        
-        var urlstring = self.urlFromPart(part)
+    func setUrl(urlstring: String) {
         
         var url = NSURL(string: urlstring)
         
         curReq = NSURLRequest(URL: url!)
+    }
+    
+    func setUrlFromPart(part: String) {
+        
+        var urlstring = self.urlFromPart(part)
+        
+        self.setUrl(urlstring)
     }
     
     func setLandscape(land: Bool) {

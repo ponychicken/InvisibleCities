@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuView: UIViewController {
+class MenuView: UIViewController, UIGestureRecognizerDelegate, UINavigationBarDelegate {
     
     @IBOutlet var containerView : UIView? = nil
     
