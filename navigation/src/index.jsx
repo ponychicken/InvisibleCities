@@ -20,7 +20,7 @@ var projects = [
     author: 'Dom Okah',
     city: 'Perinthia',
     text: fillText,
-    image: './IMG_0012.png',
+    image: './IMG_0012.PNG',
     landscape: true
   },
   
@@ -28,21 +28,21 @@ var projects = [
     author: 'Lorenz',
     city: 'Unknown',
     text: fillText,
-    image: './IMG_0013.png',
+    image: './IMG_0013.PNG',
     landscape: false
   },
   {
     author: 'Wiebke Helmchen',
     city: 'Chloe',
     text: fillText,
-    image: './IMG_0011.png',
+    image: './IMG_0011.PNG',
     landscape: true
   },
   {
     author: 'Ilya Barret',
     city: 'Perinthia',
     text: fillText,
-    image: './IMG_0016.png',
+    image: './IMG_0016.PNG',
     landscape: false
   },
 ];
@@ -50,25 +50,41 @@ var projects = [
 var appTitle = "Die Unsichtbaren Städte"
 
 var App = React.createClass({
-
+  getInitialState: function() {
+    return {
+      coverVisible: true
+    };
+  },
+  
   render: function() {
-    return (
-      <div>
+    
+    if (!this.state.coverVisible) {
+      return (
+        <GridView projects={projects} ref="gridView"/>
+      );
+    } else {
+      return (
+        <div>
+           <Swipeable className="fullscreenPage" onSwiped={this.handleSwipe}>
+            <Cover title={appTitle} subtitle="Zeichnungen + Interaktionen" onClick={this.advance}/>
+          </Swipeable>
+          <Swipeable className="fullscreenPage" onSwiped={this.handleSwipe}>
+              <Menu list={menuItems} title={appTitle}/>
+              <GridView projects={projects} ref="gridView"/>
+          </Swipeable>
+        </div>
+      );
+    }
+    
 
-         <Swipeable className="fullscreenPage" onSwiped={this.handleSwipe}>
-          <Cover title={appTitle} subtitle="Zeichnungen + Interaktionen"/>
-        </Swipeable>
-        <Swipeable className="fullscreenPage" onSwiped={this.handleSwipe}>
-            <Menu list={menuItems} title={appTitle}/>
-            <GridView projects={projects} ref="gridView"/>
-        </Swipeable>
-      </div>
-    );
   },
   handleSwipe: function (e, x, y, flick) {
     console.log(e, x, y, flick);
     if (flick && y > 0 && Math.abs(y) > Math.abs(x)) {
       document.body.className='page1';
+      this.setState({
+        coverVisible: false
+      })
       e.preventDefault();
       e.stopPropagation();
     }
@@ -78,6 +94,9 @@ var App = React.createClass({
       e.preventDefault();
       e.stopPropagation();
     }
+  },
+  advance: function() {
+    document.body.className='page1';
   }
 })
 
