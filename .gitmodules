@@ -26,5 +26,5 @@
 	path = Cities/gabi
 	url = https://github.com/ponychicken/invisiblecities-gabi.git
 [submodule "Cities/navigation"]
-	path = navigation
+	path = Cities/navigation
 	url = https://github.com/ponychicken/invisibleCities-navigation
