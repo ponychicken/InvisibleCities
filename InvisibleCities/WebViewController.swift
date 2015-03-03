@@ -10,6 +10,7 @@ import WebKit
 import UIKit
 import AVFoundation
 import Darwin
+import Foundation
 
 let π = M_PI
 
@@ -17,7 +18,8 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     
     internal var url = ""
     
-    @IBOutlet var containerView : UIView? = nil
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var containerView : UIView!
     
     var webView: WKWebView?
     var curReq: NSURLRequest?
@@ -42,6 +44,10 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         
         self.webView?.navigationDelegate = self
         self.webView?.scrollView.bounces = false
+        self.webView?.description
+            
+            
+        
         
         self.view = self.webView
         
@@ -57,8 +63,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
             self.rotate()
             self.colorBackground()
         }
-        
-
         
         self.setupNavBar()
     }
@@ -117,13 +121,12 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     func urlFromPart(part: String) -> String {
         var server = "http://localhost:8116"
         var file = "index.html"
-        return server + "/" + part + "/" + file
+        return server + part + "/" + file
     }
     
     func setUrl(urlstring: String) {
-        
-        var url = NSURL(string: urlstring)
-        
+        self.url = urlstring;
+        let url = NSURL(string: urlstring)
         curReq = NSURLRequest(URL: url!)
     }
     
@@ -208,12 +211,17 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     func fadeBar(to: CGFloat) {
-        self.fadeBar(to, delay: 0)
+        self.fadeBar(to, delay: 0, duration: 0.5)
+    }
+
+    func fadeBar(to: CGFloat, delay: NSTimeInterval) {
+        self.fadeBar(to, delay: delay, duration: 0.5)
     }
     
-    func fadeBar(to: CGFloat, delay: NSTimeInterval) {
+    func fadeBar(to: CGFloat, delay: NSTimeInterval, duration: NSTimeInterval) {
+        println("fading bar");
         UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(0.5)
+        UIView.setAnimationDuration(duration)
         UIView.setAnimationDelay(delay)
         self.navigationController?.navigationBar.alpha = to
         UIView.commitAnimations()
@@ -221,7 +229,33 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
-        self.fadeBar(0, delay: 1)
+        println("finished navigation");
+        self.fadeBar(0, delay: 0, duration: 0)
+    }
+    
+    func webView(webView: WKWebView!, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
+        decisionHandler: (WKNavigationActionPolicy) -> Void) {
+            println(navigationAction.request.URL.scheme)
+            if (navigationAction.request.URL.scheme == "thepony") {
+                decisionHandler(WKNavigationActionPolicy.Cancel);
+                var data = [String: AnyObject]();
+                data["path"] = navigationAction.request.URL.path;
+                if let query = navigationAction.request.URL.query {
+                    let queryArr = split(query, { $0 == "&"})
+                    for param in queryArr {
+                        let splitParams = split(param, { $0 == "="});
+                        var name = "";
+                        name = splitParams[0];
+                        var isTrue = (splitParams[1] == "true");
+                        data.updateValue(isTrue, forKey: name)
+                    }
+                }
+
+                
+                self.performSegueWithIdentifier("goToContent", sender: data)
+            } else {
+                 decisionHandler(WKNavigationActionPolicy.Allow);
+            }
     }
     
     func setupNavBar() {
@@ -240,8 +274,23 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     
     
     @IBAction func showBar(sender: AnyObject) {
+        println("showing bar");
         self.fadeBar(1)
-        //self.fadeBar(0, delay: 3)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let dict = sender as? Dictionary<String, AnyObject> {
+            let path = dict["path"] as String;
+            let landscape = dict["landscape"] as Bool;
+            let specialRotate = dict["specialRotate"] as Bool;
+            
+            if let destination = segue.destinationViewController as? WebViewController {
+                destination.setUrlFromPart(path);
+                //hadestination.setLandscape(landscape)
+                destination.setSpecialRotate(specialRotate)
+            }
+        }
     }
     
     

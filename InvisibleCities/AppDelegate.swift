@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         
-        var docRoot = NSBundle.mainBundle().pathForResource("index", ofType: ".html", inDirectory: "dist");
-        docRoot = docRoot?.stringByDeletingLastPathComponent;
-        
+        var docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities");
+        println(docRoot)
         webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
         
         webServer.startWithPort(8116, bonjourName: nil)
