@@ -29,7 +29,7 @@
                         </fragment>
                     </attributedString>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://pony.local:8000/index.html"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://localhost:8116/navigation/index.html"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="containerView" destination="puH-oB-M2z" id="kDn-GO-FPL"/>
