@@ -51,6 +51,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vUX-bk-QKZ">
+                    <connections>
+                        <action selector="onLongPress:" destination="BYZ-38-t0r" id="D5z-KF-5xe"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="M6j-s4-Vj6">
+                    <connections>
+                        <action selector="onShortTap:" destination="BYZ-38-t0r" id="2OY-UO-WHD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1571" y="-575"/>
         </scene>
