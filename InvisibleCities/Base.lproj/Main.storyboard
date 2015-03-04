@@ -20,17 +20,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="glk-Nd-il3"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <attributedString key="userComments">
-                        <fragment content="this is the ">
-                            <attributes>
-                                <font key="NSFont" metaFont="smallSystem"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="http://localhost:8116/navigation/index.html"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="containerView" destination="puH-oB-M2z" id="kDn-GO-FPL"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToContent" id="kUU-of-m0H"/>

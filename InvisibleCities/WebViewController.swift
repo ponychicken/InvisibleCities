@@ -52,9 +52,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         self.webView?.navigationDelegate = self
         self.webView?.scrollView.bounces = false
         self.webView?.description
-            
-            
-        
         
         self.view = self.webView
         
@@ -68,7 +65,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         if (curReq != nil) {
             self.webView!.loadRequest(curReq!);
             self.rotate()
-            self.colorBackground()
         }
         
         self.setupNavBar()
@@ -92,7 +88,7 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     override func didReceiveMemoryWarning() {
-        println("mem warn")
+        println("Received memory warning")
         
         NSURLCache.sharedURLCache().removeAllCachedResponses()
         
@@ -150,21 +146,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     
     func setSpecialRotate(rotate: Bool) {
         self.specialRotate = rotate
-    }
-    
-    func setBackground(black: Bool) {
-        self.blackBackground = black
-    }
-    
-    func colorBackground() {
-        if (self.blackBackground) {
-            self.view.backgroundColor = UIColor.blackColor()
-            self.webView?.scrollView.backgroundColor = UIColor.blackColor()
-            
-        } else {
-            self.view.backgroundColor = UIColor.whiteColor()
-            self.webView?.scrollView.backgroundColor =  UIColor.whiteColor()
-        }
     }
     
     func hasCorrectRotation() -> Bool {
@@ -257,9 +238,8 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
                         data.updateValue(isTrue, forKey: name)
                     }
                 }
-
-                
                 self.performSegueWithIdentifier("goToContent", sender: data)
+                
             } else {
                  decisionHandler(WKNavigationActionPolicy.Allow);
             }
@@ -286,7 +266,6 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if let dict = sender as? Dictionary<String, AnyObject> {
             let path = dict["path"] as String;
             let landscape = dict["landscape"] as Bool;
@@ -299,7 +278,4 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
             }
         }
     }
-    
-    
 }
-
