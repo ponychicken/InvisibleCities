@@ -14,9 +14,16 @@ import Foundation
 
 let π = M_PI
 
+#if DEBUG
+    let startURL = "http://pony.local:8000/"
+#else
+    let startURL = "http://localhost:8116/navigation/index.html"
+#endif
+
+
 class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINavigationBarDelegate, WKNavigationDelegate {
-    
-    internal var url = ""
+
+    internal var url = startURL;
     
     @IBOutlet var contentView: UIView!
     @IBOutlet var containerView : UIView!
