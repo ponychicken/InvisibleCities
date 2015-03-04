@@ -3,3 +3,4 @@
 
 pod "GCDWebServer", "~> 3.0"
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+pod 'SwipeBack', '~> 1.0'

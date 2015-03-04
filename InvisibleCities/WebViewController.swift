@@ -246,7 +246,8 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     func setupNavBar() {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
+        //self.navigationController?.navigationBar.alpha = 0
     }
     
     

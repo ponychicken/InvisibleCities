@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BCED0079C212E60C8312519"
-               BuildableName = "libPods-Reveal-iOS-SDK.a"
-               BlueprintName = "Pods-Reveal-iOS-SDK"
+               BlueprintIdentifier = "38B03A5838280FF9DCD9DB1F"
+               BuildableName = "libPods-SwipeBack.a"
+               BlueprintName = "Pods-SwipeBack"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

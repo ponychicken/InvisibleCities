@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-JRSwizzle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Reveal-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SwipeBack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>45352268EF8CB1717265F277</key>
+		<key>0F0D86852E225E5BA1CB2B29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FC0BAFFD10085A075BA579C</key>
+		<key>218FFE581C2D8A1FF7976C9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBB456CA762D4BF9E65753D4</key>
+		<key>38B03A5838280FF9DCD9DB1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BCED0079C212E60C8312519</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236B32E7A93A6219F807038</key>
 		<dict>
 			<key>primary</key>
 			<true/>

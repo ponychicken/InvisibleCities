@@ -18,6 +18,18 @@
 #define COCOAPODS_VERSION_MINOR_GCDWebServer_Core 2
 #define COCOAPODS_VERSION_PATCH_GCDWebServer_Core 1
 
+// JRSwizzle
+#define COCOAPODS_POD_AVAILABLE_JRSwizzle
+#define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
+#define COCOAPODS_VERSION_MINOR_JRSwizzle 0
+#define COCOAPODS_VERSION_PATCH_JRSwizzle 0
+
+// SwipeBack
+#define COCOAPODS_POD_AVAILABLE_SwipeBack
+#define COCOAPODS_VERSION_MAJOR_SwipeBack 1
+#define COCOAPODS_VERSION_MINOR_SwipeBack 0
+#define COCOAPODS_VERSION_PATCH_SwipeBack 4
+
 // Debug build configuration
 #ifdef DEBUG
 
