@@ -198,28 +198,28 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
         }
     }
     
-    func fadeBar(to: CGFloat) {
-        self.fadeBar(to, delay: 0, duration: 0.5)
-    }
-
-    func fadeBar(to: CGFloat, delay: NSTimeInterval) {
-        self.fadeBar(to, delay: delay, duration: 0.5)
-    }
+//    func fadeBar(to: CGFloat) {
+//        self.fadeBar(to, delay: 0, duration: 0.5)
+//    }
+//
+//    func fadeBar(to: CGFloat, delay: NSTimeInterval) {
+//        self.fadeBar(to, delay: delay, duration: 0.5)
+//    }
+//    
+//    func fadeBar(to: CGFloat, delay: NSTimeInterval, duration: NSTimeInterval) {
+//        println("fading bar");
+//        UIView.beginAnimations(nil, context: nil)
+//        UIView.setAnimationDuration(duration)
+//        UIView.setAnimationDelay(delay)
+//        self.navigationController?.navigationBar.alpha = to
+//        UIView.commitAnimations()
+//        //self.navigationController?.navigationBar.frame = CGRectMake(40, 10, 150, 45)
+//    }
     
-    func fadeBar(to: CGFloat, delay: NSTimeInterval, duration: NSTimeInterval) {
-        println("fading bar");
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(duration)
-        UIView.setAnimationDelay(delay)
-        self.navigationController?.navigationBar.alpha = to
-        UIView.commitAnimations()
-        self.navigationController?.navigationBar.frame = CGRectMake(40, 10, 150, 45)
-    }
-    
-    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
-        println("finished navigation");
-        self.fadeBar(0, delay: 0, duration: 0)
-    }
+//    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+//        println("finished navigation");
+//        self.fadeBar(0, delay: 0, duration: 0)
+//    }
     
     func webView(webView: WKWebView!, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
         decisionHandler: (WKNavigationActionPolicy) -> Void) {
@@ -246,23 +246,13 @@ class WebViewController: UIViewController, UIGestureRecognizerDelegate, UINaviga
     }
     
     func setupNavBar() {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        var navBar: UINavigationBar? = self.navigationController?.navigationBar
-        
-        var bounds: CGRect? = navBar?.bounds
-        
-        navBar?.bounds = bounds!
-        navBar?.frame = CGRectMake(40, 10, 150, 45)
-
-        
-        navBar?.tintColor = UIColor.whiteColor()
-        navBar?.barTintColor = UIColor.blackColor()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     
     @IBAction func showBar(sender: AnyObject) {
         println("showing bar");
-        self.fadeBar(1)
+        //self.fadeBar(1)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
