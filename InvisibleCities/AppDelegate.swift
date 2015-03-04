@@ -22,12 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         
-        var docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities");
-        println(docRoot)
+        var docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities")
+        
         webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
         
         webServer.startWithPort(8116, bonjourName: nil)
-        
         
         audioSession.setCategory(AVAudioSessionCategorySoloAmbient, error: &audioError)
         
@@ -50,14 +49,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-    
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         audioSession.setActive(false, error: &audioError);
         
         if ((audioError) != nil) {
             println(audioError)
         }
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
