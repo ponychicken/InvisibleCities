@@ -21,7 +21,6 @@
                     <navigationItem key="navigationItem" id="glk-Nd-il3"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="containerView" destination="puH-oB-M2z" id="kDn-GO-FPL"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToContent" id="kUU-of-m0H"/>
                     </connections>
                 </viewController>
@@ -45,10 +44,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="PuB-eL-tov"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="containerView" destination="8bC-Xf-vdC" id="xcU-ur-pMq"/>
-                        <outlet property="contentView" destination="8bC-Xf-vdC" id="cf7-H3-ADL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

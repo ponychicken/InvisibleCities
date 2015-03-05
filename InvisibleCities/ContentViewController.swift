@@ -9,10 +9,14 @@
 import Foundation
 import WebKit
 
+let π = M_PI
+
 class ContentViewController: NavigationViewController, UIGestureRecognizerDelegate {
     
     var backButton: UIButton?
-
+    var isLandscape = true
+    var specialRotate = false
+    var allowRotate = false
     
     override func loadView() {
         super.loadView()
@@ -28,6 +32,10 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         shortTap.requireGestureRecognizerToFail(longPress)
         
         self.createBackButton()
+        
+        if (curReq != nil) {
+            self.rotate()
+        }
     }
     
     //
@@ -136,4 +144,69 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         self.specialRotate = rotate
     }
     
+    override func shouldAutorotate() -> Bool {
+        if (self.allowRotate || !self.hasCorrectRotation()) {
+            println("allowing autorotate")
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        if (isLandscape) {
+            return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+        } else {
+            return Int(UIInterfaceOrientationMask.PortraitUpsideDown.rawValue)
+        }
+    }
+    func hasCorrectRotation() -> Bool {
+        var device: UIDeviceOrientation = UIDevice.currentDevice().orientation
+        var interface: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        
+        // Nothing to in these cases
+        if (device.isFlat || !device.isValidInterfaceOrientation || device == UIDeviceOrientation.Unknown) {
+            return true
+        }
+        
+        // Simple cases: Interface is not what we want
+        if (self.isLandscape && !interface.isLandscape) {
+            return false
+        }
+        if (!self.isLandscape && interface.isLandscape) {
+            return false
+        }
+        
+        // Same orientation (portrait/land) but not exactly the same.
+        if (interface.isLandscape == device.isLandscape && device.rawValue != interface.rawValue) {
+            return false
+        }
+        
+        // What else?
+        return true
+    }
+    
+    func rotate () {
+        if (!self.hasCorrectRotation()) {
+            var value = (self.isLandscape) ? UIInterfaceOrientation.LandscapeLeft.rawValue : UIInterfaceOrientation.Portrait.rawValue
+            
+            self.allowRotate = true
+            
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+            
+            self.allowRotate = false
+            
+            UIViewController.attemptRotationToDeviceOrientation()
+        }
+        
+        if (self.specialRotate) {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
+            self.view.transform = transform
+        } else {
+            var transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
+            self.view.transform = transform
+        }
+    }
+    
+
 }

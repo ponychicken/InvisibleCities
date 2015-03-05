@@ -12,7 +12,7 @@ import UIKit
 
 class NavDelegate: UINavigationController, UINavigationBarDelegate {
     override func shouldAutorotate() -> Bool {        
-        if let viewController = self.visibleViewController as? WebViewController {
+        if let viewController = self.visibleViewController as? ContentViewController {
             return viewController.shouldAutorotate()
         } else {
             return true
