@@ -13,7 +13,6 @@
 		B338EC04196B40EA006441AB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* NavigationViewController.swift */; };
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
 		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
-		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
 		B33DB83B1AA8425F004A259E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DB83A1AA8425F004A259E /* ContentViewController.swift */; };
 		B33DB83D1AA84AB3004A259E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DB83C1AA84AB3004A259E /* WebViewController.swift */; };
 		B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C251A3A680C00DD03EE /* WebKit.framework */; };
@@ -43,8 +42,6 @@
 		B338EC06196B40EA006441AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B338EC08196B40EA006441AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
 		B33DB83A1AA8425F004A259E /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		B33DB83C1AA84AB3004A259E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -81,7 +78,6 @@
 				B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */,
 				B37A2C251A3A680C00DD03EE /* WebKit.framework */,
 				B338EBFE196B40EA006441AB /* InvisibleCities */,
-				B338EC11196B40EA006441AB /* InvisibleCitiesTests */,
 				B338EBFD196B40EA006441AB /* Products */,
 				D4BDD462FDC20BC3E14A2B8F /* Pods */,
 				F1EF17225231ED4E1FFAEB0F /* Frameworks */,
@@ -117,23 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				B338EC00196B40EA006441AB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B338EC11196B40EA006441AB /* InvisibleCitiesTests */ = {
-			isa = PBXGroup;
-			children = (
-				B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */,
-				B338EC12196B40EA006441AB /* Supporting Files */,
-			);
-			path = InvisibleCitiesTests;
-			sourceTree = "<group>";
-		};
-		B338EC12196B40EA006441AB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B338EC13196B40EA006441AB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
