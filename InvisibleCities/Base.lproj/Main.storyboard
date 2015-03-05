@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Web View Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="kSO-62-O9V">
             <objects>
-                <viewController id="39f-Fj-YnC" customClass="WebViewController" customModule="InvisibleCities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="39f-Fj-YnC" customClass="NavigationViewController" customModule="InvisibleCities" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wbJ-Yv-E7A"/>
                         <viewControllerLayoutGuide type="bottom" id="VWR-bS-17d"/>
@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="841" y="-575"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="WebViewController" customModule="InvisibleCities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ContentViewController" customModule="InvisibleCities" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,16 +51,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vUX-bk-QKZ">
-                    <connections>
-                        <action selector="onLongPress:" destination="BYZ-38-t0r" id="D5z-KF-5xe"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <tapGestureRecognizer id="M6j-s4-Vj6">
-                    <connections>
-                        <action selector="onShortTap:" destination="BYZ-38-t0r" id="2OY-UO-WHD"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1571" y="-575"/>
         </scene>

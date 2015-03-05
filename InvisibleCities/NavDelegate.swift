@@ -11,10 +11,6 @@ import Foundation
 import UIKit
 
 class NavDelegate: UINavigationController, UINavigationBarDelegate {
-    func positionForBar(id: UIBarPositioning) -> UIBarPosition {
-        return UIBarPosition.Any
-    }
-    
     override func shouldAutorotate() -> Bool {        
         if let viewController = self.visibleViewController as? WebViewController {
             return viewController.shouldAutorotate()

@@ -10,10 +10,11 @@
 		35412447FBFE28F2EAA35DD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7DEAAB7457097C78F0979C /* libPods.a */; };
 		B33723AC1AA678A900927845 /* Cities in Resources */ = {isa = PBXBuildFile; fileRef = B33723AB1AA678A900927845 /* Cities */; };
 		B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC01196B40EA006441AB /* AppDelegate.swift */; };
-		B338EC04196B40EA006441AB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* WebViewController.swift */; };
+		B338EC04196B40EA006441AB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC03196B40EA006441AB /* NavigationViewController.swift */; };
 		B338EC07196B40EA006441AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B338EC05196B40EA006441AB /* Main.storyboard */; };
 		B338EC09196B40EA006441AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B338EC08196B40EA006441AB /* Images.xcassets */; };
 		B338EC15196B40EA006441AB /* InvisibleCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */; };
+		B33DB83B1AA8425F004A259E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DB83A1AA8425F004A259E /* ContentViewController.swift */; };
 		B37A2C261A3A680C00DD03EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C251A3A680C00DD03EE /* WebKit.framework */; };
 		B37A2C281A3A6ADF00DD03EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */; };
 		B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE33341A4BA4960042E9CC /* NavDelegate.swift */; };
@@ -37,12 +38,13 @@
 		B338EBFC196B40EA006441AB /* InvisibleCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvisibleCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B338EC03196B40EA006441AB /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B338EC03196B40EA006441AB /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		B338EC06196B40EA006441AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B338EC08196B40EA006441AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B338EC0E196B40EA006441AB /* InvisibleCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvisibleCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC13196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC14196B40EA006441AB /* InvisibleCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCitiesTests.swift; sourceTree = "<group>"; };
+		B33DB83A1AA8425F004A259E /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B37A2C271A3A6ADF00DD03EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B39A14E11AA775EE00DB0475 /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
@@ -98,7 +100,8 @@
 			children = (
 				B39A14E11AA775EE00DB0475 /* bridging-header.h */,
 				B338EC01196B40EA006441AB /* AppDelegate.swift */,
-				B338EC03196B40EA006441AB /* WebViewController.swift */,
+				B338EC03196B40EA006441AB /* NavigationViewController.swift */,
+				B33DB83A1AA8425F004A259E /* ContentViewController.swift */,
 				B338EC05196B40EA006441AB /* Main.storyboard */,
 				B338EC08196B40EA006441AB /* Images.xcassets */,
 				B338EBFF196B40EA006441AB /* Supporting Files */,
@@ -298,8 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B338EC04196B40EA006441AB /* WebViewController.swift in Sources */,
+				B338EC04196B40EA006441AB /* NavigationViewController.swift in Sources */,
 				B338EC02196B40EA006441AB /* AppDelegate.swift in Sources */,
+				B33DB83B1AA8425F004A259E /* ContentViewController.swift in Sources */,
 				B3BE33351A4BA4960042E9CC /* NavDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
