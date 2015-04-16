@@ -34,7 +34,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         
         self.view = self.webView
         
-        self.setUrl(self.url)
+        self.setUrlFromString(self.url)
         
         if (curReq != nil) {
             self.webView!.loadRequest(curReq!)
@@ -69,13 +69,13 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         return true
     }
     
-    func setUrl(urlstring: String) {
+    func setUrlFromString(urlstring: String) {
         self.url = urlstring;
         let url = NSURL(string: urlstring)
         curReq = NSURLRequest(URL: url!)
     }
     
-    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         // Disable selection
         webView.evaluateJavaScript("document.documentElement.style.webkitUserSelect='none';", completionHandler: nil);
         webView.evaluateJavaScript("document.documentElement.style.webkitTouchCallout='none';", completionHandler: nil);

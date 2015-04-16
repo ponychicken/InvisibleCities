@@ -14,17 +14,17 @@ import WebKit
 
 class NavigationViewController: WebViewController, WKNavigationDelegate {
 
-    func webView(webView: WKWebView!, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
+    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
         decisionHandler: (WKNavigationActionPolicy) -> Void) {
-            println(navigationAction.request.URL.scheme)
-            if (navigationAction.request.URL.scheme == "thepony") {
+            println(navigationAction.request.URL!.scheme)
+            if (navigationAction.request.URL!.scheme == "thepony") {
                 decisionHandler(WKNavigationActionPolicy.Cancel);
                 var data = [String: AnyObject]();
-                data["path"] = navigationAction.request.URL.path;
-                if let query = navigationAction.request.URL.query {
-                    let queryArr = split(query, { $0 == "&"})
+                data["path"] = navigationAction.request.URL!.path;
+                if let query = navigationAction.request.URL!.query {
+                    let queryArr = split(query, isSeparator: { $0 == "&"})
                     for param in queryArr {
-                        let splitParams = split(param, { $0 == "="});
+                        let splitParams = split(param, isSeparator: { $0 == "="});
                         var name = "";
                         name = splitParams[0];
                         var isTrue = (splitParams[1] == "true");
@@ -40,13 +40,13 @@ class NavigationViewController: WebViewController, WKNavigationDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dict = sender as? Dictionary<String, AnyObject> {
-            let path = dict["path"] as String;
-            let landscape = dict["landscape"] as Bool;
-            let specialRotate = dict["specialRotate"] as Bool;
+            let path = dict["path"] as! String;
+            let landscape = dict["landscape"] as! Bool;
+            let specialRotate = dict["specialRotate"] as! Bool;
             
             if let destination = segue.destinationViewController as? ContentViewController{
                 destination.setUrlFromPart(path)
-                destination.setSpecialRotate(specialRotate)
+                destination.specialRotate = specialRotate
             }
         }
     }

@@ -44,7 +44,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func createBackButton() {
         let image = UIImage(named: "backButton")
-        let button = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         var size = image?.size
         var point = CGPointMake(35, 0);
         button.frame = CGRect(origin: point, size: size!)
@@ -110,7 +110,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     // Hide back button after 5 seconds
     //
 
-    override func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+    override func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         super.webView(webView, didFinishNavigation: navigation!)
         var time = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
@@ -129,7 +129,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     }
     func setUrlFromPart(part: String) {
         var urlstring = self.urlFromPart(part)
-        self.setUrl(urlstring)
+        self.setUrlFromString(urlstring)
     }
     
     //
@@ -138,10 +138,6 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func setLandscape(land: Bool) {
         self.isLandscape = land
-    }
-    
-    func setSpecialRotate(rotate: Bool) {
-        self.specialRotate = rotate
     }
     
     override func shouldAutorotate() -> Bool {
