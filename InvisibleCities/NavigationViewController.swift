@@ -9,7 +9,7 @@ import WebKit
 #if DEBUG
     let startURL = "http://pony.local:8000/"
 #else
-    let startURL = "http://localhost:8116/navigation/index.html"
+    let startURL = "http://localhost:8116/navigation/index.prod.html"
 #endif
 
 class NavigationViewController: WebViewController, WKNavigationDelegate {
