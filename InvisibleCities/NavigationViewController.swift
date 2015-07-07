@@ -1,7 +1,7 @@
 //
 //  NavigationViewController
 //
-//  Class used for displaying the nvaigation elements
+//  Class used for displaying the navigation elements
 //
 
 import WebKit
