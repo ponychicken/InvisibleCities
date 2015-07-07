@@ -75,7 +75,18 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         curReq = NSURLRequest(URL: url!)
     }
     
+    // MARK: WKNavigationDelegate
+    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        NSLog("Start")
+    }
+    
+    func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+        NSLog("Failed Navigation %@", error.localizedDescription)
+    }
+    
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        NSLog("Finish Navigation")
+        NSLog("Title:%@ URL:%@", webView.title!, webView.URL!)
         // Disable selection
         webView.evaluateJavaScript("document.documentElement.style.webkitUserSelect='none';", completionHandler: nil);
         webView.evaluateJavaScript("document.documentElement.style.webkitTouchCallout='none';", completionHandler: nil);
