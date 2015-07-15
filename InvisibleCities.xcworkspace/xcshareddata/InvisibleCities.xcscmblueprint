@@ -1,0 +1,93 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8E41BACCB44A5F6C4F3E53DEB5E0146B18FE8917",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E31328939FEAB6742184FAB2DFF5724756DFA536" : 0,
+    "B8F14C3B46172DF54AE839E6E8DEBDD1E7B4469F" : 0,
+    "083B09F63A717E385635596EDACEFF7DC31DDDCE" : 0,
+    "4CF9903231C9751CC9CB854533813ED4995A3DD7" : 0,
+    "3932A952A9A482544D17B1E9350C576EB30740C9" : 0,
+    "67C112A49F12B0C9DDC20409D822F2CAA272B667" : 0,
+    "3805AC96FC629EAEDAE070F861BF57A2DEDDA1A1" : 0,
+    "8E41BACCB44A5F6C4F3E53DEB5E0146B18FE8917" : 0,
+    "76CA271172D19256E40E0259E9500B57A582404E" : 0,
+    "8D958480237C4DCA31F95EC4811AF8D69D7EC96F" : 0,
+    "4F701EF519BB32168881E75C7E638DFD85B9054D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6D1A1ACF-9A80-45DA-B835-0D82E5F3EEFE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E31328939FEAB6742184FAB2DFF5724756DFA536" : "InvisibleCitiesCities\/dom",
+    "B8F14C3B46172DF54AE839E6E8DEBDD1E7B4469F" : "InvisibleCitiesCities\/eric",
+    "083B09F63A717E385635596EDACEFF7DC31DDDCE" : "InvisibleCitiesCities\/navigation",
+    "4CF9903231C9751CC9CB854533813ED4995A3DD7" : "InvisibleCitiesCities\/leo",
+    "3932A952A9A482544D17B1E9350C576EB30740C9" : "InvisibleCitiesCities\/lynn",
+    "67C112A49F12B0C9DDC20409D822F2CAA272B667" : "InvisibleCitiesCities\/wiebke",
+    "3805AC96FC629EAEDAE070F861BF57A2DEDDA1A1" : "InvisibleCitiesCities\/marion",
+    "8E41BACCB44A5F6C4F3E53DEB5E0146B18FE8917" : "InvisibleCities",
+    "76CA271172D19256E40E0259E9500B57A582404E" : "InvisibleCitiesCities\/lorenz",
+    "8D958480237C4DCA31F95EC4811AF8D69D7EC96F" : "InvisibleCitiesCities\/gabi",
+    "4F701EF519BB32168881E75C7E638DFD85B9054D" : "InvisibleCitiesCities\/ilya"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InvisibleCities",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InvisibleCities.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisibleCities-navigation",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "083B09F63A717E385635596EDACEFF7DC31DDDCE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-marion.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3805AC96FC629EAEDAE070F861BF57A2DEDDA1A1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-lynn.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3932A952A9A482544D17B1E9350C576EB30740C9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-leo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CF9903231C9751CC9CB854533813ED4995A3DD7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-ilya.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F701EF519BB32168881E75C7E638DFD85B9054D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-wiebke.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67C112A49F12B0C9DDC20409D822F2CAA272B667"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-lorenz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76CA271172D19256E40E0259E9500B57A582404E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-gabi.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8D958480237C4DCA31F95EC4811AF8D69D7EC96F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ponychicken\/InvisibleCities.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8E41BACCB44A5F6C4F3E53DEB5E0146B18FE8917"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-eric.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B8F14C3B46172DF54AE839E6E8DEBDD1E7B4469F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ponychicken\/invisiblecities-dom.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E31328939FEAB6742184FAB2DFF5724756DFA536"
+    }
+  ]
+}

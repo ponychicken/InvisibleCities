@@ -44,9 +44,9 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func createBackButton() {
         let image = UIImage(named: "backButton")
-        let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        var size = image?.size
-        var point = CGPointMake(35, 0);
+        let button = UIButton(type: UIButtonType.Custom)
+        let size = image?.size
+        let point = CGPointMake(35, 0);
         button.frame = CGRect(origin: point, size: size!)
         button.setImage(image, forState: .Normal)
         button.addTarget(self, action: "popNavigationController:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -75,7 +75,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     }
     
     func fadeButton(to: CGFloat, delay: NSTimeInterval, duration: NSTimeInterval) {
-        println("fading button")
+        print("fading button")
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(duration)
         UIView.setAnimationDelay(delay)
@@ -87,22 +87,22 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     // Gesture recognizers to show back button
     //
     
-    func gestureRecognizer(UIGestureRecognizer,
+    func gestureRecognizer(_: UIGestureRecognizer,
         shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
             return true
     }
     
     func onLongPress(sender: AnyObject) {
-        println("long press, showing button");
+        print("long press, showing button");
         self.fadeButton(1)
-        var time = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
             self.fadeButton(0)
         })
     }
     
     func onShortTap(sender: AnyObject) {
-        println("short tap")
+        print("short tap")
         self.fadeButton(0)
     }
     
@@ -112,7 +112,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
 
     override func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         super.webView(webView, didFinishNavigation: navigation!)
-        var time = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
             self.fadeButton(0)
         })
@@ -123,13 +123,16 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     //
     
     func urlFromPart(part: String) -> String {
-        var server = "http://localhost:8116"
-        var file = "index.html"
-        return server + part + "/" + file
+        let file = "index.html"
+        return part.substringFromIndex(advance(part.startIndex, 1)) +  "/" + file
     }
     func setUrlFromPart(part: String) {
-        var urlstring = self.urlFromPart(part)
-        self.setUrlFromString(urlstring)
+        print(part)
+        self.url = self.urlFromPart(part)
+        print(self.url)
+        if (iOS8) {
+            self.createReqFromUrl(part)
+        }
     }
     
     //
@@ -142,18 +145,18 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     override func shouldAutorotate() -> Bool {
         if (self.allowRotate || !self.hasCorrectRotation()) {
-            println("allowing autorotate")
+            print("allowing autorotate")
             return true
         } else {
             return false
         }
     }
     
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if (isLandscape) {
-            return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+            return UIInterfaceOrientationMask.Landscape
         } else {
-            return Int(UIInterfaceOrientationMask.PortraitUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.PortraitUpsideDown
         }
     }
     func hasCorrectRotation() -> Bool {
@@ -184,7 +187,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func rotate () {
         if (!self.hasCorrectRotation()) {
-            var value = (self.isLandscape) ? UIInterfaceOrientation.LandscapeLeft.rawValue : UIInterfaceOrientation.Portrait.rawValue
+            let value = (self.isLandscape) ? UIInterfaceOrientation.LandscapeLeft.rawValue : UIInterfaceOrientation.Portrait.rawValue
             
             self.allowRotate = true
             
@@ -196,10 +199,10 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         }
         
         if (self.specialRotate) {
-            var transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
+            let transform: CGAffineTransform = CGAffineTransformMakeRotation(1.5707963268)
             self.view.transform = transform
         } else {
-            var transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
+            let transform: CGAffineTransform = CGAffineTransformMakeRotation(0)
             self.view.transform = transform
         }
     }

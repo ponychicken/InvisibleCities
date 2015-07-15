@@ -22,22 +22,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        var docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities")
         
-        webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
+        if (iOS8) {
+            let docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities")
+            webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
+            webServer.startWithPort(8116, bonjourName: nil)
+        }
+
         
-        webServer.startWithPort(8116, bonjourName: nil)
-        
-        audioSession.setCategory(AVAudioSessionCategorySoloAmbient, error: &audioError)
-        
-        if ((audioError) != nil) {
-            println(audioError)
+        do {
+            try audioSession.setCategory(AVAudioSessionCategorySoloAmbient)
+        } catch let error as NSError {
+            audioError = error
         }
         
-        audioSession.setActive(true, error: &audioError);
+        if ((audioError) != nil) {
+            print(audioError)
+        }
+        
+        do {
+            try audioSession.setActive(true)
+        } catch let error as NSError {
+            audioError = error
+        }
         
         if ((audioError) != nil) {
-            println(audioError)
+            print(audioError)
         }
 
         return true
@@ -51,10 +61,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        audioSession.setActive(false, error: &audioError);
+        do {
+             try audioSession.setActive(false)
+        } catch let error as NSError {
+            audioError = error
+        }
         
         if ((audioError) != nil) {
-            println(audioError)
+            print(audioError)
         }
 
     }

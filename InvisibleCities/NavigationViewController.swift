@@ -6,28 +6,23 @@
 
 import WebKit
 
-#if DEBUG
-    let startURL = "http://pony.local:8000/"
-#else
-    let startURL = "http://localhost:8116/navigation/index.html"
-#endif
 
-class NavigationViewController: WebViewController, WKNavigationDelegate {
+class NavigationViewController: WebViewController {
 
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
         decisionHandler: (WKNavigationActionPolicy) -> Void) {
-            println(navigationAction.request.URL!.scheme)
+            print(navigationAction.request.URL!.scheme)
             if (navigationAction.request.URL!.scheme == "thepony") {
                 decisionHandler(WKNavigationActionPolicy.Cancel);
                 var data = [String: AnyObject]();
                 data["path"] = navigationAction.request.URL!.path;
                 if let query = navigationAction.request.URL!.query {
-                    let queryArr = split(query, isSeparator: { $0 == "&"})
+                    let queryArr = split(query.characters, isSeparator: { $0 == "&"}).map { String($0) }
                     for param in queryArr {
-                        let splitParams = split(param, isSeparator: { $0 == "="});
+                        let splitParams = split(param.characters, isSeparator: { $0 == "="}).map { String($0) };
                         var name = "";
                         name = splitParams[0];
-                        var isTrue = (splitParams[1] == "true");
+                        let isTrue = (splitParams[1] == "true");
                         data.updateValue(isTrue, forKey: name)
                     }
                 }
@@ -40,14 +35,24 @@ class NavigationViewController: WebViewController, WKNavigationDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dict = sender as? Dictionary<String, AnyObject> {
-            let path = dict["path"] as! String;
-            let landscape = dict["landscape"] as! Bool;
-            let specialRotate = dict["specialRotate"] as! Bool;
+            let path = dict["path"] as! String
+            //let landscape = dict["landscape"] as! Bool
+            let specialRotate = dict["specialRotate"] as! Bool
             
             if let destination = segue.destinationViewController as? ContentViewController{
                 destination.setUrlFromPart(path)
                 destination.specialRotate = specialRotate
             }
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print(self.url)
+        print("view appears")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        print("mem warn")
     }
 }

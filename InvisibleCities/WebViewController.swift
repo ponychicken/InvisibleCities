@@ -9,18 +9,34 @@ import WebKit
 import AVFoundation
 import Foundation
 
+
+#if DEBUG
+    let server = "http://pony.local:8000/"
+    let suffix = "navigation/index.html"
+    #else
+let server = "http://localhost:8116/"
+let suffix = "navigation/index.html"
+#endif
+
 class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigationDelegate {
     
     var webView: WKWebView?
     var curReq: NSURLRequest?
-    var url = startURL
+    var url = suffix
     
     override func loadView() {
         super.loadView()
         
-        var config = WKWebViewConfiguration()
-        config.mediaPlaybackAllowsAirPlay = false;
-        config.mediaPlaybackRequiresUserAction = false;
+        let config = WKWebViewConfiguration()
+        
+        if #available(iOS 9.0, *) {
+            config.requiresUserActionForMediaPlayback = false
+            config.allowsAirPlayForMediaPlayback = false
+        } else {
+            config.mediaPlaybackRequiresUserAction = false
+            config.mediaPlaybackAllowsAirPlay = false
+        }
+        
         config.allowsInlineMediaPlayback = true;
         
         self.webView = WKWebView(
@@ -34,21 +50,39 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         
         self.view = self.webView
         
-        self.setUrlFromString(self.url)
         
-        if (curReq != nil) {
+        #if DEBUG
+            self.createReqFromUrl(self.url)
+            if (curReq != nil) {
             self.webView!.loadRequest(curReq!)
-        }
+            }
+            #else
+            if #available(iOS 9.0, *) {
+                if let root = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("Cities") {
+                    print(root)
+                    //var error: NSError?
+                    let url = root.URLByAppendingPathComponent(self.url)
+                    print(url)
+                    self.webView!.loadFileURL(url, allowingReadAccessToURL: root)
+                }
+            } else {
+                self.createReqFromUrl(self.url)
+                if (curReq != nil) {
+                    self.webView!.loadRequest(curReq!)
+                }
+            }
+        #endif
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var cacheSizeMemory = 8*1024*1024; // 8MB
-        var cacheSizeDisk = 32*1024*1024; // 32MB
+        let cacheSizeMemory = 8*1024*1024; // 8MB
+        let cacheSizeDisk = 32*1024*1024; // 32MB
         
-        var sharedCache = NSURLCache.init(
+        let sharedCache = NSURLCache.init(
             memoryCapacity:cacheSizeMemory,
             diskCapacity:cacheSizeDisk,
             diskPath: "nsurlcache"
@@ -58,7 +92,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     }
     
     override func didReceiveMemoryWarning() {
-        println("Received memory warning")
+        print("Received memory warning")
         
         NSURLCache.sharedURLCache().removeAllCachedResponses()
         
@@ -69,9 +103,10 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         return true
     }
     
-    func setUrlFromString(urlstring: String) {
+    func createReqFromUrl(urlstring: String) {
         self.url = urlstring;
-        let url = NSURL(string: urlstring)
+        
+        let url = NSURL(string: server + urlstring)
         curReq = NSURLRequest(URL: url!)
     }
     
