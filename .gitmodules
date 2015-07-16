@@ -2,7 +2,7 @@
 	path = Cities/lynn
 	url = https://github.com/ponychicken/invisiblecities-lynn.git
 [submodule "Cities/dom"]
-	path = Cities/dominic/
+	path = Cities/dominic
 	url = https://github.com/ponychicken/invisiblecities-dom.git
 [submodule "Cities/wiebke"]
 	path = Cities/wiebke
