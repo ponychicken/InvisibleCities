@@ -22,6 +22,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     var webView: WKWebView?
     var curReq: NSURLRequest?
+    var loadingImageView: UIImageView?
     var url = suffix
     
     override func loadView() {
@@ -77,6 +78,19 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     
     override func viewDidLoad() {
+        
+        // Show launch image while loading the very first view
+        if (url == "navigation/index.html") {
+            loadingImageView = UIImageView(frame: (webView?.frame)!)
+            self.view.addSubview(loadingImageView!)
+            
+            if let img = splashImageForOrientation(UIApplication.sharedApplication().statusBarOrientation, size: self.view.bounds.size) {
+                loadingImageView?.image = UIImage(named: img)
+            }
+            
+            self.view.addSubview(loadingImageView!)
+        }
+
         super.viewDidLoad()
         
         let cacheSizeMemory = 8*1024*1024; // 8MB
@@ -120,6 +134,14 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     }
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        
+        if (url == "navigation/index.html") {
+            delay(0.1) {
+                self.loadingImageView?.removeFromSuperview()
+                print("showing")
+            }
+        }
+        
         NSLog("Finish Navigation")
         NSLog("Title:%@ URL:%@", webView.title!, webView.URL!)
         // Disable selection
