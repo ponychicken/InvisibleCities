@@ -36,12 +36,13 @@ class NavigationViewController: WebViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dict = sender as? Dictionary<String, AnyObject> {
             let path = dict["path"] as! String
-            //let landscape = dict["landscape"] as! Bool
+            let landscape = dict["landscape"] as! Bool
             let specialRotate = dict["specialRotate"] as! Bool
             
             if let destination = segue.destinationViewController as? ContentViewController{
                 destination.setUrlFromPart(path)
                 destination.specialRotate = specialRotate
+                destination.isLandscape = landscape
             }
         }
     }
