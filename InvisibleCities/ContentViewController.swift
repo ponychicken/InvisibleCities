@@ -32,10 +32,8 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         shortTap.requireGestureRecognizerToFail(longPress)
         
         self.createBackButton()
+        self.rotate()
         
-        if (curReq != nil) {
-            self.rotate()
-        }
     }
     
     //
@@ -97,7 +95,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         self.fadeButton(1)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
-            self.fadeButton(0)
+            self.fadeButton(0.15)
         })
     }
     
@@ -126,6 +124,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         let file = "index.html"
         return part.substringFromIndex(advance(part.startIndex, 1)) +  "/" + file
     }
+    
     func setUrlFromPart(part: String) {
         print(part)
         self.url = self.urlFromPart(part)
@@ -159,6 +158,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
             return UIInterfaceOrientationMask.PortraitUpsideDown
         }
     }
+    
     func hasCorrectRotation() -> Bool {
         var device: UIDeviceOrientation = UIDevice.currentDevice().orientation
         var interface: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
