@@ -95,13 +95,13 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         self.fadeButton(1)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
-            self.fadeButton(0.15)
+            self.fadeButton(0.4)
         })
     }
     
     func onShortTap(sender: AnyObject) {
         print("short tap")
-        self.fadeButton(0)
+        self.fadeButton(0.4)
     }
     
     //
@@ -112,7 +112,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         super.webView(webView, didFinishNavigation: navigation!)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), {
-            self.fadeButton(0)
+            self.fadeButton(0.4)
         })
     }
     
