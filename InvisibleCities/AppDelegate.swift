@@ -23,13 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
-        if (iOS8) {
-            let docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities")
-            webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
-            webServer.startWithPort(8116, bonjourName: nil)
-        }
-
         
+        let docRoot = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Cities")
+        webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
+        webServer.startWithPort(8116, bonjourName: nil)
+
         do {
             try audioSession.setCategory(AVAudioSessionCategorySoloAmbient)
         } catch let error as NSError {
