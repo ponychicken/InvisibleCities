@@ -76,6 +76,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        do {
+            //try audioSession.setActive(false)
+            try audioSession.setInputGain(1)
+        } catch let error as NSError {
+            audioError = error
+        }
+        
+        if ((audioError) != nil) {
+            print(audioError)
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
