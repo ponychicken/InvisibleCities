@@ -47,11 +47,7 @@ class NavigationViewController: WebViewController {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        print(self.url)
-        print("view appears")
-    }
+
     
     override func didReceiveMemoryWarning() {
         print("mem warn")
