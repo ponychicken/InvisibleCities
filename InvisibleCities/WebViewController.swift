@@ -24,6 +24,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     var curReq: NSURLRequest?
     var loadingImageView: UIImageView?
     var url = suffix
+    var needsServer = false
     
     override func loadView() {
         super.loadView()
@@ -59,13 +60,21 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
             }
             #else
             if #available(iOS 9.0, *) {
-                if let root = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("Cities") {
-                    print(root)
-                    //var error: NSError?
-                    let url = root.URLByAppendingPathComponent(self.url)
-                    print(url)
-                    self.webView!.loadFileURL(url, allowingReadAccessToURL: root)
+                if (needsServer) {
+                    self.createReqFromUrl(self.url)
+                    if (curReq != nil) {
+                        self.webView!.loadRequest(curReq!)
+                    }
+                } else {
+                    if let root = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("Cities") {
+                        print(root)
+                        //var error: NSError?
+                        let url = root.URLByAppendingPathComponent(self.url)
+                        print(url)
+                        self.webView!.loadFileURL(url, allowingReadAccessToURL: root)
+                    }
                 }
+
             } else {
                 self.createReqFromUrl(self.url)
                 if (curReq != nil) {

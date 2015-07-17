@@ -11,7 +11,7 @@ class NavigationViewController: WebViewController {
 
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction,
         decisionHandler: (WKNavigationActionPolicy) -> Void) {
-            print(navigationAction.request.URL!.scheme)
+            print(navigationAction.request.URL!)
             if (navigationAction.request.URL!.scheme == "thepony") {
                 decisionHandler(WKNavigationActionPolicy.Cancel);
                 var data = [String: AnyObject]();
@@ -38,11 +38,13 @@ class NavigationViewController: WebViewController {
             let path = dict["path"] as! String
             let landscape = dict["landscape"] as! Bool
             let specialRotate = dict["specialRotate"] as! Bool
+            let needsServer = dict["needsServer"] as! Bool
             
             if let destination = segue.destinationViewController as? ContentViewController{
                 destination.setUrlFromPart(path)
                 destination.specialRotate = specialRotate
                 destination.isLandscape = landscape
+                destination.needsServer = needsServer
             }
         }
     }
