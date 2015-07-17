@@ -157,4 +157,19 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         webView.evaluateJavaScript("document.documentElement.style.webkitUserSelect='none';", completionHandler: nil);
         webView.evaluateJavaScript("document.documentElement.style.webkitTouchCallout='none';", completionHandler: nil);
     }
+    
+    // MARK: Reloading
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print(self.url)
+        print(self.webView!.estimatedProgress)
+        print(self.webView!.loading)
+    
+        if (self.webView!.loading == false && self.webView!.estimatedProgress < 1) {
+            print("needs reload")
+            self.webView?.reload()
+        }
+            
+        print("view appears")
+    }
 }
