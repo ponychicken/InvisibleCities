@@ -122,7 +122,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func urlFromPart(part: String) -> String {
         let file = "index.html"
-        if (needsServer) {
+        if (iOS8 || needsServer) {
             return "http://localhost:8116" + part + "/" + file
         } else {
             return part.substringFromIndex(advance(part.startIndex, 1)) +  "/" + file
@@ -132,10 +132,10 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     func setUrlFromPart(part: String) {
         print(part)
         self.url = self.urlFromPart(part)
+        self.path = part
+        print("setUrlFromPart")
         print(self.url)
-        if (iOS8 || needsServer) {
-            self.createReqFromUrl(part)
-        }
+        print(self.path)
     }
     
     //
