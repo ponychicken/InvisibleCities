@@ -42,7 +42,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func createBackButton() {
         let image = UIImage(named: "backButton")
-        let button = UIButton(type: UIButtonType.Custom)
+        let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         let size = image?.size
         let point = CGPointMake(35, 0);
         button.frame = CGRect(origin: point, size: size!)
@@ -155,11 +155,11 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         }
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+    override func supportedInterfaceOrientations() -> Int {
         if (isLandscape) {
-            return UIInterfaceOrientationMask.Landscape
+            return Int(UIInterfaceOrientationMask.Landscape.rawValue)
         } else {
-            return UIInterfaceOrientationMask.PortraitUpsideDown
+            return Int(UIInterfaceOrientationMask.PortraitUpsideDown.rawValue)
         }
     }
     

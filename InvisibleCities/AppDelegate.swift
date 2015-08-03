@@ -28,21 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         webServer.addGETHandlerForBasePath("/", directoryPath: docRoot, indexFilename: "index.html", cacheAge: 3600, allowRangeRequests: true)
         webServer.startWithPort(8116, bonjourName: nil)
 
-        do {
-            try audioSession.setCategory(AVAudioSessionCategorySoloAmbient)
-        } catch let error as NSError {
-            audioError = error
-        }
+        audioSession.setCategory(AVAudioSessionCategorySoloAmbient, error: &audioError)
         
         if ((audioError) != nil) {
             print(audioError)
         }
         
-        do {
-            try audioSession.setActive(true)
-        } catch let error as NSError {
-            audioError = error
-        }
+        audioSession.setActive(true, error: &audioError);
         
         if ((audioError) != nil) {
             print(audioError)
@@ -59,12 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        do {
-             try audioSession.setActive(false)
-        } catch let error as NSError {
-            audioError = error
-        }
-        
+        audioSession.setActive(false, error: &audioError);
+
         if ((audioError) != nil) {
             print(audioError)
         }
@@ -76,12 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        do {
-            //try audioSession.setActive(false)
-            try audioSession.setInputGain(1)
-        } catch let error as NSError {
-            audioError = error
-        }
+        audioSession.setInputGain(1, error: &audioError)
         
         if ((audioError) != nil) {
             print(audioError)

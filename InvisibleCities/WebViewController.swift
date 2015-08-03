@@ -32,13 +32,13 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         
         let config = WKWebViewConfiguration()
         
-        if #available(iOS 9.0, *) {
-            config.requiresUserActionForMediaPlayback = false
-            config.allowsAirPlayForMediaPlayback = false
-        } else {
+//        if #available(iOS 9.0, *) {
+//            config.requiresUserActionForMediaPlayback = false
+//            config.allowsAirPlayForMediaPlayback = false
+//        } else {
             config.mediaPlaybackRequiresUserAction = false
             config.mediaPlaybackAllowsAirPlay = false
-        }
+//        }
         
         config.allowsInlineMediaPlayback = true;
         
@@ -60,28 +60,28 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
             self.webView!.loadRequest(curReq!)
             }
         #else
-            if #available(iOS 9.0, *) {
-                if (needsServer) {
-                    self.createReqFromUrl(self.url)
-                    if (curReq != nil) {
-                        self.webView!.loadRequest(curReq!)
-                    }
-                } else {
-                    if let root = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("Cities") {
-                        print(root)
-                        //var error: NSError?
-                        let url = root.URLByAppendingPathComponent(self.path)
-                        print(url)
-                        self.webView!.loadFileURL(url, allowingReadAccessToURL: root)
-                    }
-                }
-
-            } else {
+//            if #available(iOS 9.0, *) {
+//                if (needsServer) {
+//                    self.createReqFromUrl(self.url)
+//                    if (curReq != nil) {
+//                        self.webView!.loadRequest(curReq!)
+//                    }
+//                } else {
+//                    if let root = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("Cities") {
+//                        print(root)
+//                        //var error: NSError?
+//                        let url = root.URLByAppendingPathComponent(self.path)
+//                        print(url)
+//                        self.webView!.loadFileURL(url, allowingReadAccessToURL: root)
+//                    }
+//                }
+//
+//            } else {
                 self.createReqFromUrl(self.url)
                 if (curReq != nil) {
                     self.webView!.loadRequest(curReq!)
                 }
-            }
+//            }
         #endif
         
     }
@@ -94,7 +94,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
             loadingImageView = UIImageView(frame: (webView?.frame)!)
             self.view.addSubview(loadingImageView!)
             
-            if let img = splashImageForOrientation(UIApplication.sharedApplication().statusBarOrientation, size: self.view.bounds.size) {
+            if let img = splashImageForOrientation(UIApplication.sharedApplication().statusBarOrientation, self.view.bounds.size) {
                 loadingImageView?.image = UIImage(named: img)
             }
             
