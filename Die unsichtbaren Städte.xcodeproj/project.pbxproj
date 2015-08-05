@@ -37,7 +37,7 @@
 		7A7E38B95EFFF49ACF9932B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B31AEBA61B56F30F00371A10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B33723AB1AA678A900927845 /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
-		B338EBFC196B40EA006441AB /* InvisibleCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvisibleCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Die unsichtbaren Städte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B338EC03196B40EA006441AB /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		B338EBFD196B40EA006441AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B338EBFC196B40EA006441AB /* InvisibleCities.app */,
+				B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */,
 				B338EC0E196B40EA006441AB /* Die unsichtbaren StädteTests.xctest */,
 			);
 			name = Products;
@@ -157,7 +157,7 @@
 			);
 			name = "Die unsichtbaren Städte";
 			productName = InvisibleCities;
-			productReference = B338EBFC196B40EA006441AB /* InvisibleCities.app */;
+			productReference = B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B338EC0D196B40EA006441AB /* Die unsichtbaren StädteTests */ = {
