@@ -42,7 +42,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
     
     func createBackButton() {
         let image = UIImage(named: "backButton")
-        let button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        let button = UIButton(type: UIButtonType.Custom)
         let size = image?.size
         let point = CGPointMake(35, 0);
         button.frame = CGRect(origin: point, size: size!)
@@ -125,7 +125,7 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         if (iOS8 || needsServer) {
             return "http://localhost:8116" + part + "/" + file
         } else {
-            return part.substringFromIndex(advance(part.startIndex, 1)) +  "/" + file
+            return part.substringFromIndex(part.startIndex.advancedBy(1)) +  "/" + file
         }
     }
     
@@ -155,17 +155,17 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         }
     }
     
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if (isLandscape) {
-            return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+            return UIInterfaceOrientationMask.Landscape
         } else {
-            return Int(UIInterfaceOrientationMask.PortraitUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.PortraitUpsideDown
         }
     }
     
     func hasCorrectRotation() -> Bool {
-        var device: UIDeviceOrientation = UIDevice.currentDevice().orientation
-        var interface: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+        let device: UIDeviceOrientation = UIDevice.currentDevice().orientation
+        let interface: UIInterfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
         
         // Nothing to in these cases
         if (device.isFlat || !device.isValidInterfaceOrientation || device == UIDeviceOrientation.Unknown) {

@@ -17,9 +17,9 @@ class NavigationViewController: WebViewController {
                 var data = [String: AnyObject]();
                 data["path"] = navigationAction.request.URL!.path;
                 if let query = navigationAction.request.URL!.query {
-                    let queryArr = split(query, isSeparator: { $0 == "&"})
+                    let queryArr = query.characters.split{$0 == "&"}.map(String.init)
                     for param in queryArr {
-                        let splitParams = split(param, isSeparator: { $0 == "="});
+                        let splitParams = param.characters.split{ $0 == "="}.map(String.init)
                         var name = "";
                         name = splitParams[0];
                         let isTrue = (splitParams[1] == "true");
