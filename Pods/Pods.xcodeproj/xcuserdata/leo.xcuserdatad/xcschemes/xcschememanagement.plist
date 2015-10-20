@@ -4,53 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-GCDWebServer.xcscheme</key>
+		<key>GCDWebServer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-JRSwizzle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Pods-SwipeBack.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
+		</dict>
+		<key>SwipeBack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>454E23B6C513039E9CC03C17</key>
+		<key>7119682568CE90B73B3450CBCFE4FB30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54B7618FB240DDA79BDB2161</key>
+		<key>D1F70CE1F35BBDF4AD9572A0044A0876</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89E0E89B8C3D01446B15B578</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>95AFA5FB19B503CF23BDCE30</key>
+		<key>D2C1301F55A057AB4484B5303528F457</key>
 		<dict>
 			<key>primary</key>
 			<true/>

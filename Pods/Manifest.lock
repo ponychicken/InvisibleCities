@@ -1,21 +1,15 @@
 PODS:
-  - GCDWebServer (3.2.1):
-    - GCDWebServer/Core (= 3.2.1)
-  - GCDWebServer/Core (3.2.1)
-  - JRSwizzle (1.0)
-  - Reveal-iOS-SDK (1.0.7)
-  - SwipeBack (1.0.4):
-    - JRSwizzle (~> 1.0)
+  - GCDWebServer (3.2.7):
+    - GCDWebServer/Core (= 3.2.7)
+  - GCDWebServer/Core (3.2.7)
+  - SwipeBack (1.1.0)
 
 DEPENDENCIES:
   - GCDWebServer (~> 3.0)
-  - Reveal-iOS-SDK
   - SwipeBack (~> 1.0)
 
 SPEC CHECKSUMS:
-  GCDWebServer: 1cec9b5af4ddba3f00b3632cf39b6bc3a1bdebe1
-  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
-  Reveal-iOS-SDK: 9125c58562f3347f6d74bb5e94b5311ef2568d2f
-  SwipeBack: 8e596c1f99bddf068d3734ac50638879fcc746b0
+  GCDWebServer: 76a9540371d5f12f850b32ec7f555dd2d266e543
+  SwipeBack: 45a42c333b7b9657b9f02cf19673339b3a006195
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
