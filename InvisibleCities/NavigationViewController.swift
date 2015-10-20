@@ -41,10 +41,11 @@ class NavigationViewController: WebViewController {
             let needsServer = dict["needsServer"] as! Bool
             
             if let destination = segue.destinationViewController as? ContentViewController{
-                destination.setUrlFromPart(path)
+
                 destination.specialRotate = specialRotate
                 destination.isLandscape = landscape
                 destination.needsServer = needsServer
+                destination.setUrlFromPart(path)
             }
         }
     }
