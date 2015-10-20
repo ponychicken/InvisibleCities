@@ -37,13 +37,13 @@
 		7A7E38B95EFFF49ACF9932B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B31AEBA61B56F30F00371A10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B33723AB1AA678A900927845 /* Cities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cities; sourceTree = "<group>"; };
-		B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Die unsichtbaren Städte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B338EBFC196B40EA006441AB /* Die unsichtbaren Staedte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Die unsichtbaren Staedte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B338EC00196B40EA006441AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B338EC01196B40EA006441AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B338EC03196B40EA006441AB /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		B338EC06196B40EA006441AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B338EC08196B40EA006441AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B338EC0E196B40EA006441AB /* Die unsichtbaren StädteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Die unsichtbaren StädteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B338EC0E196B40EA006441AB /* Die unsichtbaren Staedte.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Die unsichtbaren Staedte.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33DB83A1AA8425F004A259E /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		B33DB83C1AA84AB3004A259E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B37A2C251A3A680C00DD03EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -89,8 +89,8 @@
 		B338EBFD196B40EA006441AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */,
-				B338EC0E196B40EA006441AB /* Die unsichtbaren StädteTests.xctest */,
+				B338EBFC196B40EA006441AB /* Die unsichtbaren Staedte.app */,
+				B338EC0E196B40EA006441AB /* Die unsichtbaren Staedte.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B338EBFB196B40EA006441AB /* Die unsichtbaren Städte */ = {
+		B338EBFB196B40EA006441AB /* Die unsichtbaren Staedte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren Städte" */;
+			buildConfigurationList = B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren Staedte" */;
 			buildPhases = (
 				7174E84A30BD4AE1F2E686AC /* Check Pods Manifest.lock */,
 				B338EBF8196B40EA006441AB /* Sources */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = "Die unsichtbaren Städte";
+			name = "Die unsichtbaren Staedte";
 			productName = InvisibleCities;
-			productReference = B338EBFC196B40EA006441AB /* Die unsichtbaren Städte.app */;
+			productReference = B338EBFC196B40EA006441AB /* Die unsichtbaren Staedte.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B338EC0D196B40EA006441AB /* Die unsichtbaren StädteTests */ = {
+		B338EC0D196B40EA006441AB /* Die unsichtbaren StaedteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren StädteTests" */;
+			buildConfigurationList = B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren StaedteTests" */;
 			buildPhases = (
 				B338EC0A196B40EA006441AB /* Sources */,
 				B338EC0B196B40EA006441AB /* Frameworks */,
@@ -173,9 +173,9 @@
 			dependencies = (
 				B338EC10196B40EA006441AB /* PBXTargetDependency */,
 			);
-			name = "Die unsichtbaren StädteTests";
+			name = "Die unsichtbaren StaedteTests";
 			productName = InvisibleCitiesTests;
-			productReference = B338EC0E196B40EA006441AB /* Die unsichtbaren StädteTests.xctest */;
+			productReference = B338EC0E196B40EA006441AB /* Die unsichtbaren Staedte.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "Die unsichtbaren Städte" */;
+			buildConfigurationList = B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "Die unsichtbaren Staedte" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,8 +212,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B338EBFB196B40EA006441AB /* Die unsichtbaren Städte */,
-				B338EC0D196B40EA006441AB /* Die unsichtbaren StädteTests */,
+				B338EBFB196B40EA006441AB /* Die unsichtbaren Staedte */,
+				B338EC0D196B40EA006441AB /* Die unsichtbaren StaedteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,7 +310,7 @@
 /* Begin PBXTargetDependency section */
 		B338EC10196B40EA006441AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B338EBFB196B40EA006441AB /* Die unsichtbaren Städte */;
+			target = B338EBFB196B40EA006441AB /* Die unsichtbaren Staedte */;
 			targetProxy = B338EC0F196B40EA006441AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,7 +425,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = org.KHB.InvisibleCities;
-				PRODUCT_NAME = "Die unsichtbaren Städte";
+				PRODUCT_NAME = "Die unsichtbaren Staedte";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "InvisibleCities/bridging-header.h";
 			};
@@ -449,7 +449,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = org.KHB.InvisibleCities;
-				PRODUCT_NAME = "Die unsichtbaren Städte";
+				PRODUCT_NAME = "Die unsichtbaren Staedte";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "InvisibleCities/bridging-header.h";
 			};
@@ -471,7 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lk.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Die unsichtbaren StädteTests";
+				PRODUCT_NAME = "Die unsichtbaren Staedte";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -488,7 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lk.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Die unsichtbaren StädteTests";
+				PRODUCT_NAME = "Die unsichtbaren Staedte";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "Die unsichtbaren Städte" */ = {
+		B338EBF7196B40EA006441AB /* Build configuration list for PBXProject "Die unsichtbaren Staedte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B338EC16196B40EA006441AB /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren Städte" */ = {
+		B338EC18196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren Staedte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B338EC19196B40EA006441AB /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren StädteTests" */ = {
+		B338EC1B196B40EA006441AB /* Build configuration list for PBXNativeTarget "Die unsichtbaren StaedteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B338EC1C196B40EA006441AB /* Debug */,
