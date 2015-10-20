@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/leo/invisiblecities/Die unsichtbaren Staedte.xcodeproj">
+      location = "group:Pods/Target Support Files/Pods/../../../Die unsichtbaren Staedte.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

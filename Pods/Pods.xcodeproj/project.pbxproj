@@ -57,6 +57,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		63AB7E3A1BD6474C00FB254F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63AB7E351BD6474C00FB254F /* Die unsichtbaren Staedte.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B338EBFC196B40EA006441AB;
+			remoteInfo = "Die unsichtbaren Staedte";
+		};
+		63AB7E3C1BD6474C00FB254F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63AB7E351BD6474C00FB254F /* Die unsichtbaren Staedte.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B338EC0E196B40EA006441AB;
+			remoteInfo = "Die unsichtbaren StaedteTests";
+		};
 		7CFC28722F3C4C840769DD17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 12856E2B2FEB351F42E959E5 /* Project object */;
@@ -112,6 +126,7 @@
 		5213FF56ED090B7D7DEDD800 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
 		5AA857977839AEE2368BAA28 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerURLEncodedFormRequest.h; path = GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
 		62329B38477706077D2A4362 /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataResponse.h; path = GCDWebServer/Responses/GCDWebServerDataResponse.h; sourceTree = "<group>"; };
+		63AB7E351BD6474C00FB254F /* Die unsichtbaren Staedte.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Die unsichtbaren Staedte.xcodeproj"; path = "../../../Die unsichtbaren Staedte.xcodeproj"; sourceTree = "<group>"; };
 		64AE7AF24C9093C097DB79B7 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDWebServerRequest.h; path = GCDWebServer/Core/GCDWebServerRequest.h; sourceTree = "<group>"; };
 		67186A99CDF6090C89FB9799 /* JRSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 		678E503F4BA8CAD5AD0960D1 /* Pods-JRSwizzle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JRSwizzle-Private.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +299,15 @@
 			path = "../Target Support Files/Pods-JRSwizzle";
 			sourceTree = "<group>";
 		};
+		63AB7E361BD6474C00FB254F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63AB7E3B1BD6474C00FB254F /* Die unsichtbaren Staedte.app */,
+				63AB7E3D1BD6474C00FB254F /* Die unsichtbaren Staedte.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7EA8D5C23C0B847BCBD4245D /* GCDWebServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +336,7 @@
 		DE398B0438531044932CCCC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				63AB7E351BD6474C00FB254F /* Die unsichtbaren Staedte.xcodeproj */,
 				EF5ED9C606B3F1B3DF630614 /* Pods-acknowledgements.markdown */,
 				FA5E6C46B71E9DE547B964C3 /* Pods-acknowledgements.plist */,
 				F516EFB283B31922BC40769F /* Pods-dummy.m */,
@@ -525,6 +550,12 @@
 			mainGroup = F033087772EA5CA64B0C8065;
 			productRefGroup = 16117AF5AA74D22B1188C6C6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 63AB7E361BD6474C00FB254F /* Products */;
+					ProjectRef = 63AB7E351BD6474C00FB254F /* Die unsichtbaren Staedte.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				454E23B6C513039E9CC03C17 /* Pods */,
@@ -534,6 +565,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		63AB7E3B1BD6474C00FB254F /* Die unsichtbaren Staedte.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Die unsichtbaren Staedte.app";
+			remoteRef = 63AB7E3A1BD6474C00FB254F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63AB7E3D1BD6474C00FB254F /* Die unsichtbaren Staedte.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Die unsichtbaren Staedte.xctest";
+			remoteRef = 63AB7E3C1BD6474C00FB254F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19806AA5D9534ECD2DAC134C /* Sources */ = {
