@@ -129,10 +129,15 @@ class ContentViewController: NavigationViewController, UIGestureRecognizerDelega
         }
     }
     
+    func pathFromPart(part: String) -> String {
+        let file = "index.html"
+        return part.substringFromIndex(part.startIndex.advancedBy(1)) +  "/" + file
+    }
+    
     func setUrlFromPart(part: String) {
         print(part)
         self.url = self.urlFromPart(part)
-        self.path = part
+        self.path = self.pathFromPart(part)
         print("setUrlFromPart")
         print(self.url)
         print(self.path)
